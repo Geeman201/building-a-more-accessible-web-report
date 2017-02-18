@@ -14,3 +14,6 @@ In conjunction with this report I am producing a blog.
 2. Install the fonts used in this template. They can be found in fonts/ directory
 3. From the main directory run `scripts/build.sh`
 4. Review logs for problems. PDF is output to the directory the command is ran in.
+
+### Special thanks
+[Jordan Suchow - For supplying this template](https://github.com/suchow/Dissertate)
