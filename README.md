@@ -7,6 +7,8 @@ In conjunction with this report I am producing a blog.
 |:-:|
 |  [So it begins](https://medium.com/@Geeman201/so-it-begins-c6fa30b9485e)  |
 |  [Selecting a topic](https://medium.com/@Geeman201/selecting-a-topic-4f0125941209) |
+|  [A rough timeline](https://medium.com/@Geeman201/a-rough-timeline-725d050d1ed7) |
+|  [Dissertation Manifesto](https://medium.com/@Geeman201/james-dissertation-manifesto-1d55a4afba7b) |
 
 ## This report
 ### Building pdf
