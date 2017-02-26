@@ -12,7 +12,6 @@ deploy:
   provider: releases
   api_key:
     secure: Ap4yKV5PthhX5w8hHZCqk3E51tOjM3KJz/fehj9min0wqJnnRjlmo8c+eintdqj6sFO1oc2ZtFCK6xFoOLgmtRBZ+SpwyGsnj1XLMoQafj6G98jxJyqiLWdZM5swx4G9900tugCXv2NooCQef5lbUy3ntXkk16tV4xrrgtb/V5G7nL7KbOFZVun0wM2cqRaaWRXk9Wmfr2aI6ZlWhsUBDVrvKzFCoQt9fKC0SG0l4phDWqX//Zgh1FUe3WDB8Fg96vH1voT8W3nlRYYE5RK0b16ZVWLhVJJJXlRWUqpLTYokqWzkdF/PYaysc3oqKTgOJf+QUA/vb6KWEsxQjA1t211uQI0a6cedeF4+atKnvQ+9q2g/1ffI0OLbsBQ/FZjvyj2Teke61Z0cRB0Dzc3zVq5Uf3AH9mSW4AqQLbd0JFn0hht5ZIF2VVdAfv8kIw3ACkmdRNLQ4wv25QF36oTB2unMj40O+AOPgQojtELt6dSsDCTqxsWzL+oR47sMBQGLYmgE/8AJ4MUyO8TW9pI55CxYdkkZTPN6ek3W7GXglxHTwO6RoZkPMjjHEoCqXwG5qZ0FTm3i3nWXbQW/88gTC9O9Mt+MHHROc/i/NPdOLI3OhBG+bdqR5z+p4RgNekPXDBCODpRMplsVowrLtp0S5hjX/hDJ/+BxDXLtdE7PxSg=
-  file:
-	 - /target/dissertation.pdf
+  file: /target/dissertation.pdf
   on:
     repo: Geeman201/building-a-more-accessible-web-report
