@@ -1,4 +1,4 @@
-# Building a more accessible web [![Build Status](https://travis-ci.com/Geeman201/building-a-more-accessible-web-report.svg?token=qiamXFvsN23DppxvFytx&branch=master)](https://travis-ci.com/Geeman201/building-a-more-accessible-web-report)
+# Building a more accessible web [![Build Status](https://travis-ci.org/Geeman201/building-a-more-accessible-web-report.svg?branch=master)](https://travis-ci.org/Geeman201/building-a-more-accessible-web-report)
 
 ## Blog
 In conjunction with this report I am producing a blog.
