@@ -2,16 +2,18 @@ sudo: required
 language: generic
 dist: trusty
 before_install:
- - sudo apt-get -qq update
- - sudo apt-get install -y --no-install-recommends texlive-xetex latex-xcolor texlive-latex-extra texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended lmodern
- - mkdir ~/.fonts
- - find fonts -type f -print0 |  xargs -0 cp -t ~/.fonts
+- sudo apt-get -qq update
+- sudo apt-get install -y --no-install-recommends texlive-xetex latex-xcolor texlive-latex-extra
+  texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+  lmodern
+- mkdir ~/.fonts
+- find fonts -type f -print0 |  xargs -0 cp -t ~/.fonts
 script:
- - xelatex -interaction=nonstopmode -halt-on-error dissertation.tex
+- xelatex -interaction=nonstopmode -halt-on-error dissertation.tex
 deploy:
   provider: releases
   api_key:
-    secure: Ap4yKV5PthhX5w8hHZCqk3E51tOjM3KJz/fehj9min0wqJnnRjlmo8c+eintdqj6sFO1oc2ZtFCK6xFoOLgmtRBZ+SpwyGsnj1XLMoQafj6G98jxJyqiLWdZM5swx4G9900tugCXv2NooCQef5lbUy3ntXkk16tV4xrrgtb/V5G7nL7KbOFZVun0wM2cqRaaWRXk9Wmfr2aI6ZlWhsUBDVrvKzFCoQt9fKC0SG0l4phDWqX//Zgh1FUe3WDB8Fg96vH1voT8W3nlRYYE5RK0b16ZVWLhVJJJXlRWUqpLTYokqWzkdF/PYaysc3oqKTgOJf+QUA/vb6KWEsxQjA1t211uQI0a6cedeF4+atKnvQ+9q2g/1ffI0OLbsBQ/FZjvyj2Teke61Z0cRB0Dzc3zVq5Uf3AH9mSW4AqQLbd0JFn0hht5ZIF2VVdAfv8kIw3ACkmdRNLQ4wv25QF36oTB2unMj40O+AOPgQojtELt6dSsDCTqxsWzL+oR47sMBQGLYmgE/8AJ4MUyO8TW9pI55CxYdkkZTPN6ek3W7GXglxHTwO6RoZkPMjjHEoCqXwG5qZ0FTm3i3nWXbQW/88gTC9O9Mt+MHHROc/i/NPdOLI3OhBG+bdqR5z+p4RgNekPXDBCODpRMplsVowrLtp0S5hjX/hDJ/+BxDXLtdE7PxSg=
+    secure: eUMTxfcwG6tPpr8MU+ZD3KwvGS29qkTtmeyh9mdRimSQDhbneZ+22oYukPb3BkVccpLcXopVl5qysnlFGWUk5+WJJirc0++BBKc/HC4ewGX3Hln6SWGExt6cRzrD0qWDMUk+jPF+sxMaW6lqrrjxsNuAJ+hpsKPsvIUKubwaNMzbhOSw6GnV7bx227TiMNGEO0MaCz+oOE7uZ45WBCnKg/rDg1RpHlzj1uFqbwwdVCyI8D4KFAWB9Xd9BBWQex30Ze/Jqeznxqu0c7OkeecV/atIL0L6Q5icg+n5cTds3KaWDwFyu2jxEA966cY64cyJoF+4IoT+hhrKPUoaYdQfrj2ebXu3p2DN0RZCx2AD+jQzCo1+dMpfNiTR/+oA2/kPDnK8sCN9vl2ktFypwB4GIQ1lY4fsDSDkEtdcI1Hiy6nR+KxNJQB2i4/SNtIVqXdCq6smfo7K1NnB6EsDNmtmEPsHExhRrZ12FiVNziM/OujLq16qZISkyFni58vkYz1omMKvSE/qhh4TkeKLNfvgWZSvrb31xFvbr86gAmAZIYosCCDJGva/L0GOgdHc5syPm/8XkqQRmO030JyUHUeFVGqWRP/Ae7ZQoi1CidouUuse2cTySkyLSs6vbDzLDpUVvHQM6mDN3J0P2iJ7m07DDdwELTbKcJhkWNMiABwmdy8=
   file: dissertation.pdf
   on:
     repo: Geeman201/building-a-more-accessible-web-report
