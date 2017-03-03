@@ -7,7 +7,7 @@ before_install:
  - mkdir ~/.fonts
  - find fonts -type f -print0 |  xargs -0 cp -t ~/.fonts
 script:
- - xelatex -interaction=nonstopmode -halt-on-error -output-directory dissertation.tex
+ - xelatex -interaction=nonstopmode -halt-on-error dissertation.tex
 deploy:
   provider: releases
   api_key:
