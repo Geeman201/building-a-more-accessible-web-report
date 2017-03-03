@@ -184,8 +184,8 @@
 
 % School color found from university's graphic identity site:
 % http://isites.harvard.edu/icb/icb.do?keyword=k75408&pageid=icb.page392732
-\definecolor{SchoolColor}{HTML}{fb4f14} % Crimson
-\definecolor{chaptergrey}{HTML}{fb4f14} % for chapter numbers
+\definecolor{SchoolColor}{HTML}{FB4F14} % Crimson
+\definecolor{chaptergrey}{HTML}{FB4F14} % for chapter numbers
 
 \hypersetup{
     colorlinks,
