@@ -12,7 +12,7 @@ script:
 - xelatex -interaction=nonstopmode -halt-on-error dissertation.tex
 deploy:
   provider: releases
-	skip_cleanup: true
+  skip_cleanup: true
   api_key:
     secure: eUMTxfcwG6tPpr8MU+ZD3KwvGS29qkTtmeyh9mdRimSQDhbneZ+22oYukPb3BkVccpLcXopVl5qysnlFGWUk5+WJJirc0++BBKc/HC4ewGX3Hln6SWGExt6cRzrD0qWDMUk+jPF+sxMaW6lqrrjxsNuAJ+hpsKPsvIUKubwaNMzbhOSw6GnV7bx227TiMNGEO0MaCz+oOE7uZ45WBCnKg/rDg1RpHlzj1uFqbwwdVCyI8D4KFAWB9Xd9BBWQex30Ze/Jqeznxqu0c7OkeecV/atIL0L6Q5icg+n5cTds3KaWDwFyu2jxEA966cY64cyJoF+4IoT+hhrKPUoaYdQfrj2ebXu3p2DN0RZCx2AD+jQzCo1+dMpfNiTR/+oA2/kPDnK8sCN9vl2ktFypwB4GIQ1lY4fsDSDkEtdcI1Hiy6nR+KxNJQB2i4/SNtIVqXdCq6smfo7K1NnB6EsDNmtmEPsHExhRrZ12FiVNziM/OujLq16qZISkyFni58vkYz1omMKvSE/qhh4TkeKLNfvgWZSvrb31xFvbr86gAmAZIYosCCDJGva/L0GOgdHc5syPm/8XkqQRmO030JyUHUeFVGqWRP/Ae7ZQoi1CidouUuse2cTySkyLSs6vbDzLDpUVvHQM6mDN3J0P2iJ7m07DDdwELTbKcJhkWNMiABwmdy8=
   file: dissertation.pdf
