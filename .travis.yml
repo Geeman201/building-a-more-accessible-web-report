@@ -1,8 +1,8 @@
 sudo: required
-dist: trusty
+dist: xenial
 before_install:
  - sudo apt-get -qq update
- - sudo apt-get install -y --no-install-recommends texlive-full lmodern
+ - sudo apt-get install -y --no-install-recommends texlive lmodern
  - mkdir ~/.fonts
  - find fonts -type f -print0 |  xargs -0 mv -t ~/.fonts
 script:
