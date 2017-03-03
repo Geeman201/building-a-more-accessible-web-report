@@ -1,7 +1,8 @@
 os: osx
 before_install:
- - brew install brew-cask
+ - brew tap caskroom/cask
  - brew cask install mactex
+ - mkdir ~/.fonts
  - find fonts -type f -print0 |  xargs -0 mv -t /Library/Fonts/
 script:
  - mkdir target
