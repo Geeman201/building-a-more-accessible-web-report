@@ -10,6 +10,7 @@ before_install:
 - find fonts -type f -print0 |  xargs -0 cp -t ~/.fonts
 script:
 - xelatex -interaction=nonstopmode -halt-on-error dissertation.tex
+- xelatex -interaction=nonstopmode -halt-on-error dissertation.tex
 deploy:
   provider: releases
   skip_cleanup: true

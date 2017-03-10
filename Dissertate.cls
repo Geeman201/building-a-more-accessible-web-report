@@ -242,7 +242,7 @@
 	\pagenumbering{roman}
 	\setcounter{page}{3}
 	\pagestyle{fancy}
-	\lhead{Academic Supervisor: Professor \@advisor} \rhead{\@author}
+	\lhead{Academic Supervisor: Dr \@advisor} \rhead{\@author}
 	\renewcommand{\headrulewidth}{0.0pt}
 	\vspace*{35pt}
 	\begin{center}
