@@ -4,7 +4,8 @@ dist: trusty
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y --no-install-recommends texlive-xetex latex-xcolor texlive-latex-extra
-  texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended
+  texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng
+  texlive-latex-recommended texlive-bibtex-extra
   lmodern
 - mkdir ~/.fonts
 - find fonts -type f -print0 |  xargs -0 cp -t ~/.fonts
@@ -13,7 +14,6 @@ script:
 - bibtex dissertation
 - xelatex -interaction=nonstopmode -halt-on-error dissertation
 - xelatex -interaction=nonstopmode -halt-on-error dissertation
-
 deploy:
   provider: releases
   skip_cleanup: true

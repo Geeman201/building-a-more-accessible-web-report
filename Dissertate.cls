@@ -278,7 +278,7 @@
     \clearpage
     \bibliography{references}
     \addcontentsline{toc}{chapter}{References}
-    \bibliographystyle{apalike2}
+    \bibliographystyle{harvard}
 		\begin{appendices}
         \input{chapters/appendixA}
     \end{appendices}
