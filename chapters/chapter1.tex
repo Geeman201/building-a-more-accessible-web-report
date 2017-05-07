@@ -8,9 +8,9 @@ change ourselves"
 \chapter{Background}
 % TODO
 %  * 20% = https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/600465/family-resources-survey-2015-16.pdf
-%  * Reference Law's required
-%  * Reference JAWS
-%  * Reference WCAG
+%  * Reference Disability Discrimintaion Act: http://www.legislation.gov.uk/ukpga/1995/50/contents
+%  * Reference JAWS: http://www.freedomscientific.com/Products/Blindness/JAWS
+%  * Reference WCAG: https://www.w3.org/TR/WCAG20/
 %  *
 \newthought{20\% of the UK population reported they have a disability} in
 2016, that is
@@ -35,10 +35,11 @@ produce content which is as 'accessible' as possible.
 
 \section{What is accessibility?}
 % TODO
-%  * Reference Oxfrod Dictionary
+%  * Reference Oxford Dictionary
 %  * Reference Tim Bernes-Lee: https://www.w3.org/standards/webdesign/accessibility
 %  * Reference Adobe: http://www.adobe.com/uk/accessibility/gettingstarted.html
-%  *
+%  * This feels a bit 'bitty' I think it requires some additional quotes and
+%    reasoning over the meaning
 "Accessibility" is a subjective term which offers many opinionated
 definitions. The Oxford English Dictionary defines accessiblity as:
 \begin{quote}
@@ -75,7 +76,7 @@ well ordered code.
 \section{Business Context \& Requirement}
 % TODO
 %  * Reference 'public/private' sector company
-%  * Reference John's Quote
+%  * Reference John
 Capgemini undertakes a range of projects across both public and private
 sector. In the current digital climate most projects involve the
 development of some form of web frontend. As a Professional Services supplier it
@@ -94,10 +95,10 @@ paragraph about Capgemini's need for a project in this area:
  % TODO - Talk to John RE project business benefits paragraph
 \end{quote}
 
-* Myths in the community
-  * Expensive
-  * Ugly
-  * No user will use it
+% * Myths in the community
+%  * Expensive
+%  * Ugly
+%  * No user will use it
 
 \section{User Requirement}
 
@@ -119,72 +120,66 @@ topic, to designing and building the tool.
 \end{enumerate}
 
 \section{Project Stakeholders}
-This project has a small number of stakeholders.
+% TODO - Note sure about this section - It may need to be binned!
+This project has a small number of stakeholders but hopefully a wide range of
+ beneficiaries.
 \begin{itemize}
   \item Users of assistive technologies, without them this whole project would be impossible and have no impact.
-  \item My two supervisors — Academic and Company, these are the people I will eventually present my deliverables to (as well as the
-  \section{Methodology}).
-  \item Web development engineers — If I want to improve the experience for the users these are the people that need to produce better code
+  \item My two supervisors — Academic and Company, these are the people whom
+  the deliverables will be presented too.
+  \item Web development engineers — To improve the experience for the users
+  web developers \& designers are those who need to produce a better product.
 \end{itemize}
 
 \section{Methodology}
 % TODO
-%  * Reference Capgemini Values
-%  * Reference Sprints - SCRUM
-%  * Refernece Medium
-%  * Reference Contiunous Delivery through 'The Lean Startup'
-%  * Refernece
+%  * Reference Capgemini Values: https://www.uk.capgemini.com/careers/working-at-capgemini/our-values-culture
+%  * Reference Sprints - SCRUM: https://www.scrum.org/resources/what-is-a-sprint-in-scrum
+%  * Refernece Medium: https://medium.com/
+%  * Reference Contiunous Delivery through 'The Lean Startup':
+%  * Refernece JVM team "How we work": https://capgemini.github.io/development/how-we-work/#share-knowledge
+%  * Reference MIT licence: https://opensource.org/licenses/MIT
+%  * Reference Zach Holman "Deployment should be a boring task": https://zachholman.com/posts/deploying-software
+%  * Reference Travis CI: https://travis-ci.com/
+%  * Reference Github Pages: https://pages.github.com/
 Capgemini employees are encouraged to follow seven core values. Two of them
-which stand out to me are "Boldness" and "Innovation", it is these two that
+which stand out to me are "Boldness" and "Fun", it is these two that
 drive me to try out new things in the aim of team (and consequently self)
 improvement.
 
-Although individual, this project serves as no exception and serves as
+Although individual, this project serves as no exception and offers an
 opportunity to experiment for the full duration of a project rather than just a
-few 'sprints'. From an academic perspective I wish to experiment with some of
- the following things:
+few 'sprints'. These 'experiments' will be evaluated at the end of
+the project for both myself and others to gain value from. Highlighted below
+are a few aspects in which the traditional academic model for a project will
+be broken and experimentation will prevail:
  \begin{itemize}
   \item Project Diary - Typically this is done on paper, or captured later in
-   the project. I want to use 'Medium' a free blogging platform to capture
-   individual blog entries
-  \item Project Deliverables - The deliverables are usually completed in
-  isolation or as part of a group and made available only upon completion of
-  the project. Experimenting with Continuous Delivery I am hoping
-  that all value will be instantly available and published online. This will
-  be done using tools such as Github, Github Pages and Travis CI. More detail
-   on this will follow later in the report
- \item Sharing Progress - To ensure
+   the project. 'Medium' a blogging platform will instead be used to
+   capture key events and entries. At the end of the project this will be
+   supplemented with notes from meetings between myself and my acadamic
+   supervisor.
+   %TODO - Check with HARRY if the below statement is correct. This is
+   %TODO   currently an assumption and may be totally incorrect.
+  \item Project Deliverables - The products of an academic project are usually
+  completed in isolation or as part of a group and made available only upon
+  completion of the project. Experimenting with "Continuous Delivery"
+  products of this project will be delivered whilst still undergoing active
+  development. This will enable 'faster feedback' from stakeholders and
+  result in a better end product.
+  \item Open Source Everything - Capgemini consumes and
+  produces a lot of open source software! With myself sitting within a team
+  that are leading this drive, all code produced will be available under a MIT
+  Licence on Github.
+  \item Share Everything - The JVM team has its own 'ethos' that sits on top
+  of Capgemini's core values one of these is to share knowledge within the
+  company and the wider development community. This project will follow that
+  ethos and everything will be available online.
+  \item Automation - Another of the JVM teams 'values'. Repetitive boring tasks
+  should be automated at the earliest possible chance! "Deployment should be a
+   repetitive boring task" so this will be one of the first things tackled on
+   each deliverable. This will allow its process to be tested and validated
+   for every change made thereafter; reducing risk of failure later in the
+   project. Travis CI and Github Pages will enable this.
  \end{itemize}
-
-Being a Software Engineer, Project Management is an area in
-which I have only received theoretical knowledge rather than industry experience.
-
-An area in which as Software Engineer I have only had
-theoretical experience in is project management.
-
-Following the advice in the lean startup for trying new things
- in a structured manner; not to dissimilar to a scientific experiment. The
- process for testing these hypothesese will be as follows:
-  \begin{enumerate}
-    \item Produce a theory or hypothesis
-    \item Design how to experiment
-    \item Do the minimum amount of effort to implement the design
-    \item Evaluate, to prove or disprove the hypothesis
-  \end{enumerate}
-
-
-drive
-this project
-in a different
-manner
-to most academic 'final projects'. Every aspect of the
-project will be available on GitHub or the blog from thought through to completion.
-\subsection{}
-Continuous Delivery
-
-
-\section{Current Material}
-
-
-
 
