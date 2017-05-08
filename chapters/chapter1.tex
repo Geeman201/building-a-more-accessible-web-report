@@ -1,26 +1,231 @@
 %!TEX root = ../dissertation.tex
 \begin{savequote}[75mm]
-Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo.
-\qauthor{Quoteauthor Lastname}
+"When we are no longer able to change a situation, we are challenged to
+change ourselves"
+\qauthor{Viktor E Frankl}
 \end{savequote}
 
 \chapter{Background}
+% TODO
+%  * 20% = https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/600465/family-resources-survey-2015-16.pdf
+%  * Reference Disability Discrimintaion Act: http://www.legislation.gov.uk/ukpga/1995/50/contents
+%  * Reference JAWS: http://www.freedomscientific.com/Products/Blindness/JAWS
+%  * Reference WCAG: https://www.w3.org/TR/WCAG20/
+%  *
+\newthought{20\% of the UK population reported they have a disability} in
+2016, that is
+approximately 13.3 million people. In the physical world companies are by law
+bound to ensure that this minority are able to access their services, be it by
+leaving enough room to accomodate wheel chairs, or offering large text prints
+of their products. In the digital world there are no such laws and thus the web can be a
+difficult place for these users to consume services and content.
 
-\newthought{There's something to be said for} the background chapter should provide a more in-depth survey of previous
-related work.
-The Introduction and Background sections should be answering the question
-“What is the project trying to achieve, why that is important and how is it
-different from previous work?”Include an analysis of the business context for
-the project.
+A range of assistive
+tools aim to improve the experience by targeting a selection of
+disabilities and offering other means to consume the content. For example
+JAWS targeted at visually impaired users; reading the content,
+labelling actions and offering keyboard shortcuts to navigate. The
+problem
+with all these tools is that they rely upon Software Engineers to produce
+content semantically (using HTML) and add metadata (WCAG) to enable the tools
+to better process the content.
+
+The core purpose of this project is to enable the development community to
+produce content which is as 'accessible' as possible.
+
+\section{What is accessibility?}
+% TODO
+%  * Reference Oxford Dictionary
+%  * Reference Tim Bernes-Lee: https://www.w3.org/standards/webdesign/accessibility
+%  * Reference Adobe: http://www.adobe.com/uk/accessibility/gettingstarted.html
+%  * This feels a bit 'bitty' I think it requires some additional quotes and
+%    reasoning over the meaning
+"Accessibility" is a subjective term which offers many opinionated
+definitions. The Oxford English Dictionary defines accessiblity as:
+\begin{quote}
+"The quality of being able to be reached or entered"
+\end{quote}
+
+Focussing more towards the web, Tim Berners-Lee 'Inventor of the web' wrote:
+\begin{quote}
+"The power of the Web is in its universality. Access by everyone regardless
+of disability is an essential aspect"
+\end{quote}
+
+Both of these point towards accessibility being the ability to access the
+information on offer through the web but fail to demonstrate who is
+responsible for enabling it.
+
+Adobe are more specific, they identify that designers and developers
+ have a key part to play in enabling users to access content.
+
+\begin{quote}
+"How users with disabilities access electronic information and how web content
+designers and developers enable web pages to function with assistive devices
+used by individuals with disabilities"
+\end{quote}
+
+To me, accessibility is enabling users with disabilities to have an 'equally good'
+experience as those whom are more able. This begins at the
+design level by comparing a range of user experiences to achieve the users
+goal through different methods (Sound only, Keyboard only). Then the
+responsibility that lies on developers is reduced to writing semantic well formed,
+well ordered code.
 
 
-\section{Context}
-\subsection{Business Requirement}
+\section{Business Context \& Requirement}
+% TODO
+%  * Reference 'public/private' sector company
+%  * Reference John
+Capgemini undertakes a range of projects across both public and private
+sector. In the current digital climate most projects involve the
+development of some form of web frontend. As a Professional Services supplier it
+ is quite common for Software Engineers to be multi-skilled and thus web
+ development may not be a "core skill". However, the developer may have
+ sufficient skill to produce basic front ends. It is developers whom have
+ not had adequate training/experience in producing an accessible experience
+ that tend to produce inaccessible websites.
+ Often the issues are only identified when performing 'assistive tool
+ testing' later in the project. This result is repetitive and sometimes
+ significant rework that is costly and completely avoidable.
 
-\subsection{User Requirement}
+John Clifford a Senior Software Engineer at Capgemini has written a short
+paragraph about Capgemini's need for a project in this area:
+\begin{quote}
+ % TODO - Talk to John RE project business benefits paragraph
+\end{quote}
 
-\section{Deliverables}
-This project will produce three distinct deliverables. The first, a tool for software engineers which will bootstrap itself into a web
-browser, assess and then report possible accessibility issues. The second, a suite of documentation which will demonstrate the issues, and
-show engineers how to remediate the problems - these will be produced using the current most popular tooling. The third, this report. This
-report will describe the journey, from researching the topic, to designing and building the tool.
+% * Myths in the community
+%  * Expensive
+%  * Ugly
+%  * No user will use it
+
+\section{User Requirement}
+
+
+\section{Project Goals}
+The core aim of this project is to make an impact in both Capgemini and the
+wider web development community. By discovering the communities needs first
+the project deliverables will be relevant, useful and fill the described
+business need. The deliverables are:
+\begin{enumerate}
+  \item A tool for software engineers which will bootstrap itself into a web
+browser, assess and report possible accessibility issues
+  \item A suite of documentation which will collate and demonstrate best
+practices. It will show what 'assistive tools' output based upon different
+HTML semantics. The exmaples will be produced using the current most popular
+tooling
+  \item This report which will describe the journey, from researching the
+topic, to designing and building the tool.
+\end{enumerate}
+
+\section{Project Stakeholders}
+% TODO - Note sure about this section - It may need to be binned!
+This project has a small number of stakeholders but hopefully a wide range of
+ beneficiaries.
+\begin{itemize}
+  \item Users of assistive technologies, without them this whole project would be impossible and have no impact.
+  \item My two supervisors — Academic and Company, these are the people whom
+  the deliverables will be presented too.
+  \item Software Engineers — To improve the experience for the users
+  web developers \& designers are those who need to produce a better product.
+\end{itemize}
+
+\section{Methodology}
+% TODO
+%  * Reference Capgemini Values: https://www.uk.capgemini.com/careers/working-at-capgemini/our-values-culture
+%  * Reference Sprints - SCRUM: https://www.scrum.org/resources/what-is-a-sprint-in-scrum
+%  * Refernece Medium: https://medium.com/
+%  * Reference Contiunous Delivery through 'The Lean Startup': https://continuousdelivery.com/
+%  * Refernece JVM team "How we work": https://capgemini.github.io/development/how-we-work/#share-knowledge
+%  * Reference MIT licence: https://opensource.org/licenses/MIT
+%  * Reference Zach Holman "Deployment should be a boring task": https://zachholman.com/posts/deploying-software
+%  * Reference Travis CI: https://travis-ci.com/
+%  * Reference Github Pages: https://pages.github.com/
+Capgemini employees are encouraged to follow seven core values. Two of them
+which stand out to me are "Boldness" and "Fun" \cite{CapValues}, it is these
+two that
+drive me to try out new things in the aim of team (and consequently self)
+improvement.
+
+Although individual, this project serves as no exception and offers an
+opportunity to experiment for the full duration of a project rather than just a
+few 'sprints'. These 'experiments' will be evaluated at the end of
+the project for both myself and others to gain value from. Highlighted below
+are a few aspects in which the traditional academic model for a project will
+be broken and experimentation will prevail:
+ \begin{itemize}
+  \item Project Diary - Typically this is done on paper, or captured later in
+   the project. 'Medium' a blogging platform will instead be used to
+   capture key events and entries. At the end of the project this will be
+   supplemented with notes from meetings between myself and my acadamic
+   supervisor.
+   %TODO - Check with HARRY if the below statement is correct. This is
+   %TODO   currently an assumption and may be totally incorrect.
+  \item Project Deliverables - The products of an academic project are usually
+  completed in isolation or as part of a group and made available only upon
+  completion of the project. Experimenting with "Continuous Delivery",
+  products of this project will be delivered whilst still undergoing active
+  development. This will enable 'faster feedback' from other Software
+  Engineers and produce a higher quality product
+  \item Open Source Everything - Capgemini consumes and
+  produces a lot of open source software! With myself sitting within a team
+  that are leading this drive, all code produced will be available under a MIT
+  Licence on Github.
+  \item Share Everything - The JVM team has its own 'ethos' that sits on top
+  of Capgemini's core values one of these is to share knowledge within the
+  company and the wider development community. This project will follow that
+  ethos and everything will be available online.
+  \item Automation - Another of the JVM teams 'values'. Repetitive boring tasks
+  should be automated at the earliest possible chance! "Deployment should be a
+   repetitive boring task" so this will be one of the first things tackled on
+   each deliverable. This will allow its process to be tested and validated
+   for every change made thereafter; reducing risk of failure later in the
+   project. Travis CI and Github Pages will enable this.
+ \end{itemize}
+
+\subsection{A Process}
+Capgemini projects always follow a process to ensure a quality
+product is delivered and the speed is measurable and quantifiable to
+stakeholders and clients.
+
+This project will follow the Unified Process. The unified process gives a
+structure to different phases throughout the lifecycle of the project
+Inception, Elaboration, Construction and Transition. It enables iterations
+to occur within each of these phases but focuses the iteration towards the
+goal of the phase you are currently in.
+
+
+\textbf{Why the Unified Process?}
+
+Agile is a poor fit for me as a distant learner with a
+full time job. Each iteration requires a small amount of every aspect of the
+development lifecycle (analysis, design, implementation and test). This would
+make it difficult to understand and report progress to the myself and the
+stakeholders. Given the projects deliverables are relatively well known from
+the outset Agile would only add additional unneccesary ceremonies.
+
+
+
+
+\subsection{High Level Planning}
+
+However
+due to unforseen circumstances ~6 weeks of time was lost.
+
+\subsection{Making Better Decisions}
+% TODO * reference Agile Manifesto
+Coming from a background in Agile projects, the "Agile Manifesto" has enabled
+me to make and justify difficult decisions under pressure. For example deciding
+ if a time constrained delivery should be moved into or out of the next
+ sprint. One of the 'experiments' I wish to undertake is whether having such a
+ manifesto makes a difference to a projects direction. With this in mind,
+ within the evaluation I will discuss moments this was used and how I felt
+ it impacted the project. The manifest for this project will be:
+\begin{itemize}
+  \item Making an impact over getting a good grade
+  \item Hypothesis’ and supporting evidence over guessing and assuming
+  \item "Start simple with many organic iterations" over "Upfront design"
+  \item Final Project over going to the pub
+\end{itemize}
+

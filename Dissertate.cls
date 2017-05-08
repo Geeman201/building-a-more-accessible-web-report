@@ -16,12 +16,13 @@
 %
 % Options
 %
+
 \RequirePackage{etoolbox}
 
 % Line spacing: dsingle/ddouble
 %   Whether to use single- or doublespacing.
 \newtoggle{DissertateSingleSpace}
-\togglefalse{DissertateSingleSpace}
+\toggletrue{DissertateSingleSpace}
 \DeclareOption{dsingle}{
     \toggletrue{DissertateSingleSpace}
     \ClassWarning{Dissertate}{Single-spaced mode on.}
@@ -33,8 +34,8 @@
 % Line Spacing
 %   Define two line spacings: one for the body, and one that is more compressed.
 \iftoggle{DissertateSingleSpace}{
-    \newcommand{\dnormalspacing}{1.2}
-    \newcommand{\dcompressedspacing}{1.0}
+    \newcommand{\dnormalspacing}{1.4}
+    \newcommand{\dcompressedspacing}{1.2}
 }{
     \newcommand{\dnormalspacing}{2.0}
     \newcommand{\dcompressedspacing}{1.2}
@@ -277,7 +278,7 @@
     \clearpage
     \bibliography{references}
     \addcontentsline{toc}{chapter}{References}
-    \bibliographystyle{apalike2}
+    \bibliographystyle{harvard}
 		\begin{appendices}
         \input{chapters/appendixA}
     \end{appendices}

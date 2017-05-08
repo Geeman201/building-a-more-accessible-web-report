@@ -4,5 +4,6 @@
 *.log
 *.pdf
 *.blg
+*.bbl
 .logged
 .idea/
