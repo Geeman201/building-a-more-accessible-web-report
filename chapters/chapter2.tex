@@ -1,76 +1,92 @@
 %!TEX root = ../dissertation.tex
 \begin{savequote}[75mm]
-This is some random quote to start off the chapter.
-\qauthor{Firstname lastname}
+Before anything else, preparation is the key to success.
+\qauthor{Alexander Graham Bell}
 \end{savequote}
 
 \chapter{Preparation}
+\section{A11Y Guide}
+In preperation for the main deliverable a deeper level of knowledge in the
+accessibility space was required. To gain this knowledge and inline with my
+'Share Everything' approach it was decided that an 'Accessibility
+training guide' would be produced here on referred to as 'A11Y guide'. The idea
+being that in producing a guide for others, oneself would have to be
+knowledgable enough to produce good content.
 
-\section{Way of working}
-Having gained five years industry experience I want to execute the project as it were for a client. For Capgemini this always involves
-following a defined process to ensure speed and quality. Due to the academic nature, I have chosen to use the unified process. I chose this
-over an agile model as I require more structure than agile gives and I don't feel I will have something to deliver after every iteration
-(Some of it will just be knowledge gained). I chose this over waterfall as I find waterfall too directed to the delivery of a software.
-% TODO - Insert additional reasoning
+\subsection{Planning}
+% TODO - Reference curve: http://www.wranx.com/ebbinghaus-and-the-forgetting-curve/
 
-% TODO - Insert picture of Unified process
+As researched by Ebbinghaus in 1885 the forgetting curve demonstrates the
+amount of knowledge remembered after a period of time. see Fig.~\ref{fig:ebbinghaus}
+Repeating or revising the learning unsuprisingly results in the knowledge
+stored in memory for longer.
 
-In the inception phase I will undertake research into the current state of accessibility on the web, identify the initial scope and gather
-a collection of resources which will support me throughout. The products of
-this could be considered "Iteration 1" and will be refined and built upon
-later in the project:
-\begin{itemize}
-  \item An understanding of what I want the tool to do, and how much I will build
-  \item A GitHub repository with a list of useful links
-  \item A blog which will enable others to watch my progress
-\end{itemize}
+\begin{figure}
+\includegraphics[width=\textwidth]{figures/ebbinghaus}
+\caption[Short figure name.]{Ebbinghaus' famous forgetting curve
+\label{fig:ebbinghaus}}
+\end{figure}
 
-Following this, the elaboration phase. During this I will continue with my research and use the tools assistive users use to analyse,
-assess and improve current documentation. This will give me a solid grounding before I begin writing the tool for assesing such problems,
- and is my first project deliverable.
+With this in mind I plan to iteratively build the A11Y Guide so
+that the knowledge will be reinforced. The steps for its production will be
+as follows:
+\begin{enumerate}
+  \item Search for useful resources online (This will be first time learning)
+  \item Score the identified resources with the assistive tools for a first hand
+  experience along with other criteria (This second time repeating)
+  \item Collate the resources under the correct header in a github project
+  \item Setup continuous deployment scripts to ensure deploy on commit
+  \item For each header create and document best practices (This third time
+  repeating)
+  \item Build a basic documentation website
+  \item For each header create coded examples (This fourth time repeating)
+\end{enumerate}
 
-This elaboration will have two distinct outputs:
-\begin{itemize}
-  \item Documented examples of good/bad accessibility practices
-  \item Software documentation on the tool I will produce (Sequence diagram, use case, user interface design)
-\end{itemize}
+As explicitly stated there will be four loops of observing, reviewing and
+applying the knowledge learned which should result in a peak knowledge level
+when producing the tool.
 
-The construction phase will be when I produce the tool. The tool will consist of two separate products, the first a framework for plugging
-in and assessing the accessibility of a web page. The second, a collection of rules which will produce errors, warnings or successes when
-assessing the page. This will be the main deliverable.
+\subsection{Building A11Y Guide Requirements}
+In parallel to the above, for the guidance to have a greater impact it
+needs to be current, relevant and available. This will require some additional
+research into the current state of web frameworks and also the
+requirements of Capgemini's teams. To do this I propose issuing a questionnaire to my
+colleagues and using google trends to gain an understanding of the direction
+of front end web development.
 
-Finally, the transition phase will involve producing documentation on using, extending and maintaining the project.
+\subsubsection{Questionnaire}
+Capgemini employees are
 
-\subsection{Project Management}
-To ensure the project is delivered on time I use Trello...
-% TODO - Insert picture of trello
+\subsubsection{Understanding industry movement}
+\subsubsection{A11Y Guide Requirements}
 
-I will use this to help determine value gained during my evaluation.
-% TODO - discuss purporse, value gained and in evaluation when it was used!!
+\subsection{Gathering Knowledge}
+\subsubsection{Method}
+\subsubsection{Scoring}
+\subsubsection{Outputs}
 
-\subsection{Blog/Project Diary}
-% TODO - discuss purporse and value gained
+\subsection{Building the A11Y Guide}
+\subsubsection{Iteration 1 - Create content using markdown}
+\subsubsection{Iteration 2 - UI Design & Build site}
+\subsubsection{Iteration 3 - Continue content}
+\subsubsection{Iteration 4 - Recognise/Implement custom pages}
+\subsubsection{Iteration 5 - Continue content}
+\subsubsection{Iteration 6 - Generify}
 
-\subsection{Noteworthy entries}
+\subsection{Extending the impact}
+\subsubsection{Colour Contrast Tool}
+\subsubsection{Markdown/React Documentation Framework}
+
+\section{A11Y Analysis Tool}
+\subsection{Requirements}
+\subsection{Diagrams}
+\subsection{Design}
+
+\section{Additional }
 % TODO - discuss Travis CI for report writing
 % TODO - discuss Branching model
 % TODO - discuss any Standards
 
-\section{Pre-requisite knowledge}
-\subsection{Identifying user problems}
-
-\subsection{Building a knowledge base}
-
-\section{Software Design}
-\subsection{Requirements}
-\subsubsection{Questionnaire}
-
-\subsubsection{Identification of common web frameworks}
-\subsubsection{Identification of common web components}
-\subsection{Diagrams}
-\subsubsection{Sequence Diagram}
-
-\newthought{Lorem ipsum dolor sit amet}
 
 Principally, this chapter should describe the work that was undertaken before
 code was written, hardware built, theories worked on, or research studies
