@@ -21,8 +21,10 @@ amount of knowledge remembered after a period of time. see Fig.~\ref{fig:ebbingh
 Repeating or revising the learning unsuprisingly results in the knowledge
 stored in memory for longer.
 
-\begin{figure}
-\includegraphics[width=\textwidth]{figures/ebbinghaus}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/ebbinghaus}
+\captionsetup{justification=centering}
 \caption[Short figure name.]{Ebbinghaus' famous forgetting curve
 \label{fig:ebbinghaus}}
 \end{figure}
@@ -31,15 +33,15 @@ With this in mind I plan to iteratively build the A11Y Guide so
 that the knowledge will be reinforced. The steps for its production will be
 as follows:
 \begin{enumerate}
-  \item Search for useful resources online (This will be first time learning)
+  \item Search for useful resources online (First time learning)
   \item Score the identified resources with the assistive tools for a first hand
-  experience along with other criteria (This second time repeating)
+  experience along with other criteria (Second time repeating)
   \item Collate the resources under the correct header in a github project
   \item Setup continuous deployment scripts to ensure deploy on commit
-  \item For each header create and document best practices (This third time
+  \item For each header create and document best practices (Third time
   repeating)
   \item Build a basic documentation website
-  \item For each header create coded examples (This fourth time repeating)
+  \item For each header create coded examples (Fourth time repeating)
 \end{enumerate}
 
 As explicitly stated there will be four loops of observing, reviewing and
@@ -150,30 +152,106 @@ This is probably the most important question. The answers to this will
 determine the depth to which the guidance goes into, and also it's
 recommended usage.
 
-\subsubsection{A11Y Guide Requirements}
-The following requirements will be used to determine the success and evaluate
-the solution. They have come from the results of the questionnaire and inline
-with the manifesto of the project:
-\begin{itemize}
-\item Contain output 'snippets' from the tools
-\item Use React for coding examples
-\item Use Material UI when styling or a specific framework is expected
-\item
-\end{itemize}
-
 \subsection{Gathering Knowledge}
 This section will describe the methods and results of gathering resources to
 be used to support the A11Y Guide.
 
 \subsubsection{Method}
+I chose to apply a method to ensure consistency and quality. The first and
+simplest method I experimented with to collate the top five results from
+'Google'. This was the obvious and quickest method to collate such information
+however, after reviewing resources in 'Links' and 'Buttons' items which I am
+personally familiar with. I found a lot of overlap between content and after
+testing them with the tools, similar mistakes were found across all of them.
+None seemed to capture the 'why' which naturally required a deeper analysis.
 
-\subsubsection{Scoring}
+So instead I started understanding what I wanted to get out of the resources
+which would enable me (and thus the project) to produce high quality content.
+The key things I needed to know to produce the guidance was.
+
+\begin {itemize}
+\item What does bad look like?
+\item What do I need to do? e.g Coding Examples
+\item Why should I write my code this way?
+\item How do the assistive tools handle the outputs?
+\item How can one test for correctness?
+\end{itemize}
+
+I produced 10 questions each with a possible score of 10. I was looking to
+use the three best scoring resources in my content.
+
+\subsubsection{Example Scoring}
+
+
 \subsubsection{Outputs}
+Inline with my 'Open Source' and 'Share Everything' goals the resources were
+sorted based upon their content and iteratively placed upon my github account.
+See Fig \ref{fig:allyLinksDemo} for how it looked.
+Following the principles of Continuous Delivery this could be considered the
+first version of my A11Y Guide.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/documentation_link_example}
+\captionsetup{justification=centering}
+\caption{A demonstration of the 'Navigation' content on Github.
+https://github.com/Geeman201/a11y-links/
+\label{fig:allyLinksDemo}}
+\end{figure}
+
 
 \subsection{Building the A11Y Guide}
-% TODO
-% - Reference mockups
+\subsubsection{Defining Requirements}
+% TODO - Reference Dan North https://dannorth.net/whats-in-a-story/
+From the questionnaire, common web frameworks, knowledge gained from the
+resources and inline with my manifesto I started to write down concrete
+requirements. I used Dan North's "What's in a Story" method to write them
+down as this provides a solid means to evaluate against later.
+
+\begin{center}
+ \begin{tabular}{| c |}
+ \hline
+ As a developer \\
+ \hline
+ I want to have a section highlighting the most important aspects \\
+ So that when I come to refresh my skills I only have to read that section  \\
+ \hline
+ I want to have coded examples written in React \\
+ So that I can understand and apply the knowledge \\
+ \hline
+ I want to have audio/subtitled examples of how the tools behave  \\
+ So that I know the impact (The why) of Good/Bad semantics  \\
+ \hline
+ I want relevant links available  \\
+ So that I can find more information out  \\
+ \hline
+\end{tabular}
+\end{center}
+
 \subsubsection{Iteration 1 - Create content using markdown}
+The first iteration of developing content was targetted towards the simpler
+aspects; things like content, typography and colour. The content was produced
+using markdown which using Github is rendered in a 'book' like style in the
+repository view:
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \includegraphics[width=\textwidth]{figures/documentation_md_example_1}
+        \captionsetup{justification=centering}
+        \caption{The File Hierarchy of 'Content' section}
+        \label{fig:hierarchy}
+    \end{subfigure}
+    \qquad
+    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill
+      %(or a blank line to force the subfigure onto a new line)
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{figures/documentation_md_example_2}
+        \captionsetup{justification=centering}
+        \caption{The 'structures.md' file rendered in the browser}
+        \label{fig:structures}
+    \end{subfigure}
+\end{figure}
 
 \subsubsection{Iteration 2 - UI Design \& Build site}
 I wanted the UI to be simple and follow all the best practices it recommends.
@@ -184,17 +262,67 @@ would need to supplement the main content. The code snippets
 would need to be compiled and embeddedable in the page.
 
 I used moqups to produce a three different designs.
-
+% TODO
+% - Reference mockups
 Design 1:
 
 Design 2:
 
 Design 3:
 
-I chose design three...
+I chose design...
+
+From the user interface design I produced a system design See Fig
+\ref{fig:allycomponent}. As the content was held in markdown files the
+dcumentation framework would only have to parse the markdown and generate a
+navbar and HTML. The idea was to enable the documentation framework
+to be reused by abstracting the framework away from the content itself. For a
+user of the documentation framework, I wanted them to only have to edit the
+content and/or the Table of Contents. This would enable content to be the
+users main focus and thus speed up the development of the guide.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/documentation_design}
+\captionsetup{justification=centering}
+\caption[Short figure name.]{Component Diagram for A11Y Guide
+\label{fig:allycomponent}}
+\end{figure}
+A table of contents was
+chosen rather than browsing folder structures so that users
+could be in control of the ordering on the navbar. The table of contents
+would be a JSON array with each object containing the following data:
+\begin{itemize}
+\item label - This would be the title of the page
+\item url - This would be the path so content could be linked to directly
+\item component - The markdown file to render
+\item children - An array of children pages with the same JSON object structure.
+\end{itemize}
+A side effect of this design which was only realised in Iteration 4 was the
+added benefit of extensibility and customisability of labels, url paths and
+components. See \ref{sec:iteration_4} for how the design changed to enable
+custom components to be used.
 
 \subsubsection{Iteration 3 - Continue content}
+
 \subsubsection{Iteration 4 - Recognise/Implement custom pages}
+\label{sec:iteration_4}
+The more content that was written the greater the need for the ability to
+insert custom content. I was finding myself working around the drawbacks of
+markdown when creating examples with custom HTML, JS and CSS. This became a
+real problem when building components so I decided to alter the code to
+enable React Components to be injected. How these slotted into the design is
+shown in \ref{fig:allycomponent_2}. Note how the rest of the documentation
+framework didn't have to change!
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/documentation_design_2}
+\captionsetup{justification=centering}
+\caption[Short figure name.]{Component Diagram for A11Y Guide with added JSX
+component loader highlighted in blue.
+\label{fig:allycomponent_2}}
+\end{figure}
+
 \subsubsection{Iteration 5 - Continue content}
 \subsubsection{Iteration 6 - Generify}
 
