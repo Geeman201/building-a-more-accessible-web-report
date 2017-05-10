@@ -67,11 +67,16 @@
 \usepackage{ragged2e}
 % \RaggedRight
 \RequirePackage{graphicx}
+\usepackage{subcaption}
 \usepackage{fixltx2e}
 \parindent 12pt
 \RequirePackage{lettrine}
 \RequirePackage{setspace}
 \RequirePackage{verbatim}
+
+% Figures
+\usepackage{float}
+\usepackage{wrapfig}
 
 % Fonts.
 \RequirePackage{color}
@@ -106,6 +111,7 @@
 \setlength{\headheight}{15pt}
 \pagestyle{plain}
 \RequirePackage{titling}
+\setcounter{secnumdepth}{3}
 
 % Front matter.
 \setcounter{tocdepth}{1}
