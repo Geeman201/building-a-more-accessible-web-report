@@ -4,8 +4,7 @@ Before anything else, preparation is the key to success.
 \qauthor{Alexander Graham Bell}
 \end{savequote}
 
-\chapter{Preparation}
-\section{A11Y Guide}
+\chapter{A11Y Guide}
 In preperation for the main deliverable a deeper level of knowledge in the
 accessibility space was required. To gain this knowledge and inline with my
 'Share Everything' approach it was decided that an 'Accessibility
@@ -13,6 +12,7 @@ training guide' would be produced here on referred to as 'A11Y guide'. The idea
 being that in producing a guide for others, oneself would have to be
 knowledgable enough to produce good content.
 
+\section{Preparation}
 \subsection{Planning}
 % TODO - Reference curve: http://www.wranx.com/ebbinghaus-and-the-forgetting-curve/
 
@@ -51,7 +51,7 @@ when producing the tool.
 \subsection{Building A11Y Guide Requirements}
 In parallel to the above, for the guidance to have a greater impact it
 needs to be current, relevant and available. This will require some additional
-work to research the current state of web frameworks and also the
+work to research the current direction the industry is moving and also the
 requirements of Capgemini's teams. To do this I propose issuing a
 questionnaire to my colleagues and using google trends to gain an
 understanding of the direction
@@ -61,6 +61,7 @@ of front end web development.
 % TODO
 % - Reference State of JS
 
+
 \subsubsection{Questionnaire}
 % TODO
 % - Reference Professional competency scale https://hr.od.nih.gov/workingatnih/competencies/proficiencyscale.htm
@@ -69,9 +70,11 @@ of front end web development.
 
 Capgemini employees are typically engaged on client sites across the country
 resulting in the need for the questionnaire to be digital. To increase
-the possible respondants and not affect current work it will need to be
+the possible respondants and not affect client work it will need to be
 completable in ~2-4 minutes. This will limit the number of questions and the
-type of questions that can be used.
+type of questions that can be used. Quantitive questions often require less
+thought and have pre-populated answers and thus are likely to take less time
+than Qualatative to fill out.
 
 The aim of the questionnaire is to gain a wider understanding of the
 frameworks, components and level of accessibility knowledge across a variety
@@ -80,7 +83,8 @@ etc). Due to the limited time for respondants to answer questions and the
 aim of the information I believe Quantative data is best for this purpose.
 
 Google Forms is to be used to implement the questionnaire due to its simple
-setupand integration into Google Spreadsheets which will make analysis simpler.
+setup and integration into Google Spreadsheets which will make analysis
+simpler.
 
 \textbf{Question 1 - What JS frameworks is your current project
 using?}
@@ -158,16 +162,18 @@ be used to support the A11Y Guide.
 
 \subsubsection{Method}
 I chose to apply a method to ensure consistency and quality. The first and
-simplest method I experimented with to collate the top five results from
-'Google'. This was the obvious and quickest method to collate such information
+simplest method I experimented with was to collate the top five results from
+'Google'. This was the obvious and quickest method to gather such information
 however, after reviewing resources in 'Links' and 'Buttons' items which I am
 personally familiar with. I found a lot of overlap between content and after
-testing them with the tools, similar mistakes were found across all of them.
-None seemed to capture the 'why' which naturally required a deeper analysis.
+testing them with the tools, similar mistakes across all of them.
+None seemed to capture the 'why' which naturally meant I needed a
+different method.
 
-So instead I started understanding what I wanted to get out of the resources
-which would enable me (and thus the project) to produce high quality content.
-The key things I needed to know to produce the guidance was.
+To produce a new method I started by understanding what I needed to know to
+produce the content. By understanding this I would be able to produce a method
+by which I could assess an individual resources relevance and usefulness. The
+key things I needed to know were:
 
 \begin {itemize}
 \item What does bad look like?
@@ -184,11 +190,12 @@ use the three best scoring resources in my content.
 
 
 \subsubsection{Outputs}
-Inline with my 'Open Source' and 'Share Everything' goals the resources were
-sorted based upon their content and iteratively placed upon my github account.
-See Fig \ref{fig:allyLinksDemo} for how it looked.
-Following the principles of Continuous Delivery this could be considered the
-first version of my A11Y Guide.
+Inline with my 'Open Source' and 'Share Everything' ethos the resources were
+sorted based upon their content and placed upon my github account in a public
+ repository.
+See Fig \ref{fig:allyLinksDemo}.
+Following the principles of Continuous Delivery this could in fact be
+considered the v1.0.0 of my A11Y Guide.
 
 \begin{figure}[H]
 \centering
@@ -200,20 +207,23 @@ https://github.com/Geeman201/a11y-links/
 \end{figure}
 
 
-\subsection{Building the A11Y Guide}
 \subsubsection{Defining Requirements}
 % TODO - Reference Dan North https://dannorth.net/whats-in-a-story/
 From the questionnaire, common web frameworks, knowledge gained from the
 resources and inline with my manifesto I started to write down concrete
-requirements. I used Dan North's "What's in a Story" method to write them
-down as this provides a solid means to evaluate against later.
+requirements. I used Dan North's "What's in a Story" method to write the
+requirements. I find this method gives both 'the what' and 'the why' which
+enables a better decision making process to be followed. As an additional
+benefit in this format I have a solid means by which I can evaluate the
+solution later.
 
 \begin{center}
  \begin{tabular}{| c |}
  \hline
  As a developer \\
  \hline
- I want to have a section highlighting the most important aspects \\
+ I want to have a section highlighting the most important aspects I need to
+ understand \\
  So that when I come to refresh my skills I only have to read that section  \\
  \hline
  I want to have coded examples written in React \\
@@ -228,11 +238,34 @@ down as this provides a solid means to evaluate against later.
 \end{tabular}
 \end{center}
 
-\subsubsection{Iteration 1 - Create content using markdown}
-The first iteration of developing content was targetted towards the simpler
-aspects; things like content, typography and colour. The content was produced
-using markdown which using Github is rendered in a 'book' like style in the
-repository view:
+\section{Deliverable}
+% TODO -
+% Reference Markdown -
+% Reference Github - https://github.com/open-source
+\subsection{Iteration 1 - Create content using markdown}
+The first iteration of developing content was targetted the broader aspects
+which affect every part of the experience. This covered page structure,
+page content and other general aspects like typography and colour. The content was produced
+using markdown.
+
+\subsubsection{Why Markdown?}
+Markdown was chosen as it is fast becoming the 'developer standard' for writing
+documentation. When producing content, familiarity is key to producing an
+enviornment in which people will collaborate. If you first have to
+learn a new language or tool the barrier to entry to produce the content is
+higher and thus you are less likely to do it. As Github the 'worlds biggest'
+software control platform has bought into markdown as way developers communicate
+'most' developers have at least some knowledge in the area. If they do not,
+the documentation for using markdown is well estabilished.
+
+An additional benefit to using markdown is it is relatively difficult to make
+the content you produce "Inaccessible". As I want the guide to demonstrate
+best practices; it should really be following them. Markdown compilers are
+great at transforming content into 'assistive tool' friendly HTML.
+
+Fig \ref{fig:hierarchy} and Fig \ref{fig:structures} demonstrates how the
+content is displayed in github's standard folder view. The markdown text is
+converted into HTML and displayed in a clear well structured manner.
 
 \begin{figure}[H]
     \centering
@@ -253,7 +286,7 @@ repository view:
     \end{subfigure}
 \end{figure}
 
-\subsubsection{Iteration 2 - UI Design \& Build site}
+\subsection{Iteration 2 - UI Design \& Build site}
 I wanted the UI to be simple and follow all the best practices it recommends.
 As I had written some content it made it easier to experiment and understand
 what was needed. The content was structured almost as a hierarchichal tree so
@@ -302,9 +335,11 @@ added benefit of extensibility and customisability of labels, url paths and
 components. See \ref{sec:iteration_4} for how the design changed to enable
 custom components to be used.
 
-\subsubsection{Iteration 3 - Continue content}
+\subsection{Iteration 3 - Continue content}
+As described by the title this iteration focussed on producing more content;
+specifically around forms and components.
 
-\subsubsection{Iteration 4 - Recognise/Implement custom pages}
+\subsection{Iteration 4 - Recognise/Implement custom pages}
 \label{sec:iteration_4}
 The more content that was written the greater the need for the ability to
 insert custom content. I was finding myself working around the drawbacks of
@@ -323,19 +358,69 @@ component loader highlighted in blue.
 \label{fig:allycomponent_2}}
 \end{figure}
 
-\subsubsection{Iteration 5 - Continue content}
-\subsubsection{Iteration 6 - Generify}
+\subsection{Iteration 5 - Continue content}
+This iteration involved adding coded examples to areas where markdown was
+unfortuntately not appropriate for.
 
-\subsection{Extending the impact}
-\subsubsection{Colour Contrast Tool}
-\subsubsection{Markdown/React Documentation Framework}
+\subsection{Iteration 6 - Generify}
+This iteration focussed on extracting the common documentation framework that
+had been produced. Removing the content and setting up a different repository
+which others could clone and create their own documentation from.
 
-\section{A11Y Analysis Tool}
-\subsection{Requirements}
-\subsection{Diagrams}
-\subsection{Design}
+\section{Extending the impact}
+\subsection{Markdown/React Documentation Framework}
+\subsection{Colour Contrast Tool}
+% TODO
+%  * Refernce CSS in JS
+%  * Reference Anti CSS in JS movemtn
+%  * Reference Max
+Whilst I was creating the A11Y Guide I was asked to experiment with an
+upcoming piece of technology. "CSS in JS". The industry has been moving
+towards 'component driven' development through the entrance of Angular and
+ReactJS; CSS in JS is the last step in all code relating to a
+component being co-located in a single file. Myself like others had had
+significant reservations about the performance and portability of such an
+idea. However, working for a technology consultancy firm we are advised to
+form an opinion on any impacting changes within our retrospective spaces.
 
-\section{Additional }
+I chose to do such an experiment to produce a 'better' colour contrast tool
+than the ones I found during my research. Such a tool has the two relatievly
+simple to implement requirements:
+\begin{itemize}
+\item Report the colour contrast level between two distinct colours
+\item Report whether the colours contrast level of such colours satisfies the
+ WCAG guidelines for the "wanted" text size.
+\end{itemize}
+
+Using mockups again I quickly put together a quick design using their colour
+schemes and fonts See \ref{fig:colour_contrast_1}. To test out "CSS in JS" I
+wanted to use 'Styled Components' a ReactJS implementation written by Max
+Stoblier. "Create React App" a tool for bootstrapping a React project was also
+used. This was only an 'experiment' and thus needed to be completed quickly.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\textwidth]{figures/colour_contrast_1}
+\captionsetup{justification=centering}
+\caption{Design for Colour Contrast tool
+\label{fig:colour_contrast_1}}
+\end{figure}
+
+The 'Happy Day' user journey would be:
+\begin{itemize}
+\item User enters first colour in input field (Can paste)
+\item User enters second colour in input field
+\item On a valid colour entered. Both are displayed as background and
+foreground; the value of colour contrast is displayed; and the contrast
+levels WCAG appropriateness is displayed in the circles. Green for success, Red
+for failure.
+\end{itemize}
+
+In the error scenario of a user entering an invalid colour, the background
+colours would remain the same and the input field would have a 'red'
+background and border to signify an error.
+
+
 % TODO - discuss Travis CI for report writing
 % TODO - discuss Branching model
 % TODO - discuss any Standards
