@@ -292,7 +292,7 @@ As I had written some content it made it easier to experiment and understand
 what was needed. The content was structured almost as a hierarchichal tree so
 some sort of accordian type navigation would be useful. The audio snippets
 would need to supplement the main content. The code snippets
-would need to be compiled and embeddedable in the page.
+would need to be embeddedable in the page.
 
 I used moqups to produce a three different designs.
 % TODO
@@ -332,8 +332,8 @@ would be a JSON array with each object containing the following data:
 \end{itemize}
 A side effect of this design which was only realised in Iteration 4 was the
 added benefit of extensibility and customisability of labels, url paths and
-components. See \ref{sec:iteration_4} for how the design changed to enable
-custom components to be used.
+components. See \ref{sec:iteration_4} for how this design enabled custom
+components to be used.
 
 \subsection{Iteration 3 - Continue content}
 As described by the title this iteration focussed on producing more content;
@@ -344,8 +344,9 @@ specifically around forms and components.
 The more content that was written the greater the need for the ability to
 insert custom content. I was finding myself working around the drawbacks of
 markdown when creating examples with custom HTML, JS and CSS. This became a
-real problem when building components so I decided to alter the code to
-enable React Components to be injected. How these slotted into the design is
+real problem when filling out content for the components section. I decided
+to alter the code to enable React Components to be injected. How these
+slotted into the design is
 shown in \ref{fig:allycomponent_2}. Note how the rest of the documentation
 framework didn't have to change!
 
@@ -359,8 +360,8 @@ component loader highlighted in blue.
 \end{figure}
 
 \subsection{Iteration 5 - Continue content}
-This iteration involved adding coded examples to areas where markdown was
-unfortuntately not appropriate for.
+This iteration involved adding coded examples to areas where markdown was not
+appropriate.
 
 \subsection{Iteration 6 - Generify}
 This iteration focussed on extracting the common documentation framework that
@@ -383,16 +384,19 @@ significant reservations about the performance and portability of such an
 idea. However, working for a technology consultancy firm we are advised to
 form an opinion on any impacting changes within our retrospective spaces.
 
-I chose to do such an experiment to produce a 'better' colour contrast tool
-than the ones I found during my research. Such a tool has the two relatievly
-simple to implement requirements:
+% TODO - Reference Juicy Studio/Snook
+Having done research into colour contrast tools I identified a gap for a
+"modern", user focussed tool. Most current tools require submission to a
+server and lack demonstrations of what the two colours look like when used
+together. All of them satisfied a relatievly simple set of requirements:
 \begin{itemize}
 \item Report the colour contrast level between two distinct colours
 \item Report whether the colours contrast level of such colours satisfies the
  WCAG guidelines for the "wanted" text size.
 \end{itemize}
 
-Using mockups again I quickly put together a quick design using their colour
+%TODO - Reference Moqups
+Using Moqups again I quickly put together a quick design using their colour
 schemes and fonts See \ref{fig:colour_contrast_1}. To test out "CSS in JS" I
 wanted to use 'Styled Components' a ReactJS implementation written by Max
 Stoblier. "Create React App" a tool for bootstrapping a React project was also
@@ -419,7 +423,6 @@ for failure.
 In the error scenario of a user entering an invalid colour, the background
 colours would remain the same and the input field would have a 'red'
 background and border to signify an error.
-
 
 % TODO - discuss Travis CI for report writing
 % TODO - discuss Branching model
