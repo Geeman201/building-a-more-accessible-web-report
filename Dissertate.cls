@@ -163,7 +163,7 @@
 
 % References.
 \renewcommand\bibname{References}
-\RequirePackage[super,comma,numbers]{natbib}
+\RequirePackage{natbib}
 \renewcommand{\bibnumfmt}[1]{[#1]}
 \RequirePackage[palatino]{quotchap}
 \renewcommand*{\chapterheadstartvskip}{\vspace*{-0.5\baselineskip}}
@@ -318,9 +318,9 @@
 \renewcommand{\backmatter}{
     \input{endmatter/personalize}
     \clearpage
+    \bibliographystyle{harvard}
     \bibliography{references}
     \addcontentsline{toc}{chapter}{References}
-    \bibliographystyle{harvard}
 		\begin{appendices}
         \input{chapters/appendixA}
     \end{appendices}

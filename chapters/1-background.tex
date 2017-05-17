@@ -6,16 +6,11 @@ change ourselves"
 \end{savequote}
 
 \chapter{Background}
-% TODO
-%  * 20% = https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/600465/family-resources-survey-2015-16.pdf
-%  * Reference Disability Discrimintaion Act: http://www.legislation.gov.uk/ukpga/1995/50/contents
-%  * Reference JAWS: http://www.freedomscientific.com/Products/Blindness/JAWS
-%  * Reference WCAG: https://www.w3.org/TR/WCAG20/
-%  *
-\newthought{20\% of the UK population reported they have a disability} in
-2016. That is
-approximately 13.3 million people. In the physical world, companies are by law
-bound to ensure that this minority are able to access their services; be it by
+\newthought{20\% of the UK population reported they have a disability
+\citep{UkGovFamilySurvey}.}
+That is approximately 13.3 million people. In the physical world,
+companies are by law
+bound \citep{DDA} to ensure that this minority are able to access their services; be it by
 leaving enough room to accomodate wheel chairs; or offering large text prints
 of their products. In the digital world there are no such laws and thus the web can be a
 difficult place for these users to consume services and content.
@@ -23,30 +18,30 @@ difficult place for these users to consume services and content.
 A range of assistive
 tools aim to improve the experience by targeting a selection of
 disabilities and offering other means to consume the content. For example,
-JAWS targets visually impaired users; reading the content,
+JAWS \citep{JAWS} targets visually impaired users; reading the content,
 labelling actions and offering keyboard shortcuts to navigate. The
 problem
 with all these tools is that they rely upon Software Engineers to produce
-content semantically (using HTML) and add metadata (WCAG) to enable the tools
-to better process the content.
+content semantically (using HTML) and add metadata using, until recently,
+very loose specifications \citep{WCAG} to enable the tools to better process
+the content.
 
-The core purpose of this project is to enable the development community to
-produce content which is as 'accessible' as possible.
+Although difficult to assess some companies \citep{Slate}
+\citep{SightAndSound} believe \textasciitilde70\% of all websites are
+inaccessible to all users. This identifies a clear gap in knowledge within
+the development community when it comes to producing accessible web
+applications. Thus, the purpose of this project is to enable the development
+community through education and 'easy to use' tools to think about and
+implement accessibility during development.
 
 \section{What is accessibility?}
-% TODO
-%  * Reference Oxford Dictionary
-%  * Reference Tim Bernes-Lee: https://www.w3.org/standards/webdesign/accessibility
-%  * Reference Adobe: http://www.adobe.com/uk/accessibility/gettingstarted.html
-%  * This feels a bit 'bitty' I think it requires some additional quotes and
-%    reasoning over the meaning
 "Accessibility" is a subjective term which offers many opinionated
-definitions. The Oxford English Dictionary defines accessiblity as:
+definitions. The \cite*{OxDict} defines accessiblity as:
 \begin{quote}
 "The quality of being able to be reached or entered"
 \end{quote}
 
-Tim Berners-Lee 'Inventor of the web' wrote the following:
+\cite*{TimBerners} 'Inventor of the web' wrote the following:
 \begin{quote}
 "The power of the Web is in its universality. Access by everyone regardless
 of disability is an essential aspect"
@@ -54,7 +49,8 @@ of disability is an essential aspect"
 
 Both of these point towards accessibility being the ability to access the
 information on offer through the web. Which in my opinion is definitely
-correct. Adobe become more specific, they identify that designers and
+correct. \cite*{Adobe} become more specific, they identify that
+designers and
 developers have a key part to play in enabling users to access content.
 
 \begin{quote}
@@ -63,7 +59,7 @@ designers and developers enable web pages to function with assistive devices
 used by individuals with disabilities"
 \end{quote}
 
-Finally Jim Bryne founder of Guild of Web Designers offers an interesting
+Finally \cite*{JimByrne} founder of Guild of Web Designers offers an interesting
 insight. He refers to Google as a blind visitor which is technically correct
 as google will never be able to see all the `pretty' pictures on your website.
 It can however understand text and markup. This hints at the fact that
@@ -81,28 +77,35 @@ is unfortunately entirely possible to have the most semantic well
 structured web page yet it is still totally inaccessible.
 
 \section{Business Context \& Requirement}
-% TODO
-%  * Reference 'public/private' sector company
-%  * Reference Agile Cost Of Change http://www.agilemodeling.com/essays/costOfChange.htm
-%  * Reference John
 Capgemini undertakes a range of projects across both public and private
 sector. In the current digital climate most projects involve the
 development of some form of web frontend. As a Professional Services supplier it
- is quite common for Software Engineers to be multi-skilled and thus web
- development may not be a ``core skill". A common problem is that developers
- who have not had sufficient experience or training in the area of producing
- accessible websites/applications are making simple mistakes in both design and
- implementation which result in a poor experience for users of assistive tools.
+is quite common for Software Engineers to be multi-skilled and thus web
+development may not be a ``core skill". A common problem is that developers
+who have not had sufficient experience or training in the area of producing
+accessible websites/applications are making simple mistakes in both design and
+implementation which result in a poor experience for users of assistive tools.
 
- These mistakes are only identified later in the project when
- 'assistive tool' testing is performed at which point repetitive and sometimes
- significant rework may be necessary. This is costly and completely
- avoidable.
+These mistakes are only identified later in the project when
+'assistive tool' testing is performed at which point repetitive and sometimes
+significant rework may be necessary. The agile 'Cost of Change' \citep{CostOfChange} curve
+shown in Fig.~\ref{fig:costOfChange} demonstrates this.
 
- This project aims to enable developers with limited experience in web
- development to write cleaner, more semantic code. It is through educating
- developers that the primary goal of offering a better experience to users of
- assistive tools can be achieved. By building a tool that can be used during
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/costOfChange}
+\captionsetup{justification=centering}
+\caption{Scott Amblers agile cost of change curve
+\label{fig:costOfChange}}
+\end{figure}
+
+With this in mind this project aims to enable developers with limited
+experience in web development to write cleaner, more semantic code. It is
+through educating developers that the primary goal of offering a better
+experience to users of assistive tools can be achieved.
+
+
+ By building a tool that can be used during
  the development process the feedback loop on issues will be much
  shorter and as described in agile 'cost of change' the cost of remediation
  much lower. The tool will be supported by an accessibility guide which can
@@ -112,12 +115,8 @@ John Clifford a Senior Software Engineer at Capgemini has written a short
 paragraph about Capgemini's need for a project in this area:
 \begin{quote}
  % TODO - Talk to John RE project business benefits paragraph
+ Pending paragraph from John.
 \end{quote}
-
-% * Myths in the community
-%  * Expensive
-%  * Ugly
-%  * No user will use it
 
 \section{Project Goals}
 The core aim of this project is to make an impact in both Capgemini and the
@@ -150,31 +149,21 @@ This project has a small number of stakeholders but a wide range of beneficiarie
 \end{itemize}
 
 \section{Methodology}
-% TODO
-%  * Reference Capgemini Values: https://www.uk.capgemini.com/careers/working-at-capgemini/our-values-culture
-%  * Reference Sprints - SCRUM: https://www.scrum.org/resources/what-is-a-sprint-in-scrum
-%  * Refernece Medium: https://medium.com/
-%  * Reference Contiunous Delivery through 'The Lean Startup': https://continuousdelivery.com/
-%  * Refernece JVM team "How we work": https://capgemini.github.io/development/how-we-work/#share-knowledge
-%  * Reference MIT licence: https://opensource.org/licenses/MIT
-%  * Reference Zach Holman "Deployment should be a boring task": https://zachholman.com/posts/deploying-software
-%  * Reference Travis CI: https://travis-ci.com/
-%  * Reference Github Pages: https://pages.github.com/
-%  * Reference Spiral Model:
 Capgemini employees are encouraged to follow seven core values. Two of them
-which stand out to me are ``Boldness" and ``Fun" \cite{CapValues}, it is these
+which stand out to me are ``Boldness" and ``Fun" \citep{CapValues}, it is these
 two that drive me to try out new things in the aim of team (and consequently
 self) improvement.
 
 Although individual, this project serves as no exception and offers an
 opportunity to experiment for the full duration of a project rather than a
-few 'sprints'. These 'experiments' will be evaluated at the end of
-the project for both myself and others to gain value from. Highlighted below
-are a few aspects in which the traditional academic model for a project will
-be broken and experimentation will prevail:
+few 'sprints' \citep{ScrumSprint}. These 'experiments' will be evaluated at the
+end of the project for both myself and others to gain value from. Highlighted
+below are a few aspects in which the traditional academic model for a
+project will be broken and experimentation will prevail:
  \begin{itemize}
   \item Project Diary - Typically this is done on paper, or captured later in
-   the project. 'Medium' a blogging platform will instead be used to
+   the project. 'Medium' \citep{Medium} a blogging platform will instead be
+   used to
    capture key events and entries. At the end of the project this will be
    supplemented with notes from meetings between myself and my acadamic
    supervisor.
@@ -182,29 +171,35 @@ be broken and experimentation will prevail:
    %TODO   currently an assumption and may be totally incorrect.
   \item Project Deliverables - The products of an academic project are usually
   completed in isolation or as part of a group and made available only upon
-  completion of the project. Experimenting with ``Continuous Delivery",
-  products of this project will be delivered whilst still undergoing active
-  development. This will enable 'faster feedback' from stakeholders and
-  produce a higher quality product
+  completion of the project. Experimenting with ``Continuous Delivery"
+  \citep{ContinuousDelivery}, products of this project will be delivered
+  whilst still undergoing active development. This will enable 'faster
+  feedback' from stakeholders and produce a higher quality product
   \item Open Source Everything - Capgemini consumes and
   produces a lot of open source software! With myself sitting within a team
   that are leading this drive, all code produced will be available under a MIT
-  Licence on Github.
-  \item Share Everything - The JVM team has its own 'ethos' that sits on top
+  Licence \citep{MITLicence} on Github.
+  \item Share Everything - The JVM team has its own 'ethos'
+  \citep{JVMHowWeWork} that sits on top
   of Capgemini's core values one of these is to share knowledge within the
   company and the wider development community. This project will follow that
   ethos and everything will be available online.
   \item Automation - Another of the JVM teams 'values'. Repetitive boring tasks
   should be automated at the earliest possible chance! ``Deployment should be a
-   repetitive boring task" so this will be one of the first things tackled on
+   repetitive boring task" \citep{ZachHolman} so this will be one of the first
+   things
+   tackled on
    each deliverable. This will allow its process to be tested and validated
    for every change made thereafter; reducing risk of failure later in the
-   project. Travis CI and Github Pages will enable this.
+   project. Travis CI \citep{TravisCi} and Github Pages \citep{Ghpages} will
+   enable
+   this.
  \end{itemize}
 
 \subsection{Making Better Decisions}
 % TODO * reference Agile Manifesto
-Coming from a background in Agile projects, the ``Agile Manifesto" has enabled
+Coming from a background in Agile projects, the ``Agile Manifesto" \citep{AgileManifesto} has
+enabled
 me to make and justify difficult decisions under pressure. For example deciding
  if a time constrained delivery should be moved into or out of the next
  sprint. One of the 'experiments' I wish to undertake is whether having such a
@@ -223,7 +218,8 @@ Final Project over going to the pub
 \end{center}
 
 \subsection{A Process}
-Capgemini projects always follow a process to ensure a quality
+Capgemini projects always follow a process \citep{CapgeminiSustain} to ensure a
+quality
 product is delivered with the speed being measurable and quantifiable to
 stakeholders and clients.
 
@@ -252,7 +248,6 @@ risks fall into the low probability, low impact category, and with one quater of
 each spiral dedicated to risk analysis .
 
 \subsection{High Level Planning}
-% * TODO - GANTT CHART of initial plan
 At a high level I was aiming for the following to be acheived:
 \begin{enumerate}
   \item {Inception - February}
@@ -299,12 +294,21 @@ necessary.
 I chose to change from the 'Unified Process' towards a more
 prototypical/iterative process; 'Evolutionary Prototyping'. This is a form of
 the prototyping model which often suits tight time scales and fast development
-lifecycles. The 'Evoloutionary' aspect means rather than the prototype being
-thrown away and rebuilt at the end, it will instead be iteratively enhanced
-until a final product is produced.
+lifecycles \citep{EvoProto}. The 'Evoloutionary' aspect means rather than the
+prototype being thrown away and rebuilt at the end, it will instead be
+iteratively enhanced until a final product is produced. Fig.~\ref{fig:proto}
+from \citep{EvoProto2} displays the process.
 
-This method enables the code and project to carry some technical debt whilst
-still using continuous delivery. There is a higher
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/prototyping}
+\captionsetup{justification=centering}
+\caption{Evolutionary Prototyping
+\label{fig:proto}}
+\end{figure}
+
+Using this method will enable the code and project to carry some technical debt
+whilst still using continuous delivery. There is a higher
 risk to the quality of the product but as this is an individual process I am in
 control of that and thus it will be consistent. All technical debt
 accumulated and areas for improvement will be documented in the
