@@ -46,32 +46,39 @@ definitions. The Oxford English Dictionary defines accessiblity as:
 "The quality of being able to be reached or entered"
 \end{quote}
 
-Focussing more towards the web, Tim Berners-Lee 'Inventor of the web' wrote:
+Tim Berners-Lee 'Inventor of the web' wrote the following:
 \begin{quote}
 "The power of the Web is in its universality. Access by everyone regardless
 of disability is an essential aspect"
 \end{quote}
 
 Both of these point towards accessibility being the ability to access the
-information on offer through the web but fail to demonstrate who is
-responsible for enabling it.
-
-Adobe are more specific, they identify that designers and developers
- have a key part to play in enabling users to access content.
+information on offer through the web. Which in my opinion is definitely
+correct. Adobe become more specific, they identify that designers and
+developers have a key part to play in enabling users to access content.
 
 \begin{quote}
-"How users with disabilities access electronic information and how web content
+``How users with disabilities access electronic information and how web content
 designers and developers enable web pages to function with assistive devices
 used by individuals with disabilities"
 \end{quote}
 
-To me, accessibility is enabling users with disabilities to have an 'equally good'
-experience as those whom are more able. This begins at the
-design level by comparing a range of user experiences to achieve the users
-goal through different methods (Sound only, Keyboard only). Then the
-responsibility that lies on developers is reduced to writing semantic well formed,
-well ordered code.
+Finally Jim Bryne founder of Guild of Web Designers offers an interesting
+insight. He refers to Google as a blind visitor which is technically correct
+as google will never be able to see all the `pretty' pictures on your website.
+It can however understand text and markup. This hints at the fact that
+improving the markup will improve the experience for not just users of
+assistive tools, but machines too.
 
+\begin{quote}
+``The most important blind visitor to your website is Google!"
+\end{quote}
+
+To me, accessibility is a way of thinking. It requires a range of disciplines
+and should start with what the users goal is. If any type of user is unable to
+acheive the goal they came to acheive then the web page is inaccessible. It
+is unfortunately entirely possible to have the most semantic well
+structured web page yet it is still totally inaccessible.
 
 \section{Business Context \& Requirement}
 % TODO
@@ -82,7 +89,7 @@ Capgemini undertakes a range of projects across both public and private
 sector. In the current digital climate most projects involve the
 development of some form of web frontend. As a Professional Services supplier it
  is quite common for Software Engineers to be multi-skilled and thus web
- development may not be a "core skill". A common problem is that developers
+ development may not be a ``core skill". A common problem is that developers
  who have not had sufficient experience or training in the area of producing
  accessible websites/applications are making simple mistakes in both design and
  implementation which result in a poor experience for users of assistive tools.
@@ -112,13 +119,10 @@ paragraph about Capgemini's need for a project in this area:
 %  * Ugly
 %  * No user will use it
 
-\section{User Requirement}
-- To discuss with Harry.
-
-
 \section{Project Goals}
 The core aim of this project is to make an impact in both Capgemini and the
-wider web development community. By discovering the communities needs first
+wider web development community. By discovering the software
+engineering communities needs first
 the project deliverables will be relevant, useful and fill the described
 business need. The deliverables are:
 \begin{enumerate}
@@ -135,12 +139,14 @@ topic, to designing and building the tool.
 % TODO - Note sure about this section - It may need to be binned!
 This project has a small number of stakeholders but a wide range of beneficiaries.
 \begin{itemize}
-  \item Users of assistive technologies. This whole project would be
-  impossible and have no impact without them.
   \item My two supervisors — Academic and Company, these are the people whom
   the deliverables will be presented too.
-  \item Software Engineers — To improve the experience for the users
-  web developers \& designers are those who need to produce a better product.
+  \item Software Engineers at Capgemini — To improve the experience for the
+  users web developers \& designers are those who need to produce a better
+  product.
+  \item Software Engineers within the wider community - Similar to above
+  \item Users of assistive technologies. This whole project would be
+    impossible and have no impact without them.
 \end{itemize}
 
 \section{Methodology}
@@ -156,10 +162,9 @@ This project has a small number of stakeholders but a wide range of beneficiarie
 %  * Reference Github Pages: https://pages.github.com/
 %  * Reference Spiral Model:
 Capgemini employees are encouraged to follow seven core values. Two of them
-which stand out to me are "Boldness" and "Fun" \cite{CapValues}, it is these
-two that
-drive me to try out new things in the aim of team (and consequently self)
-improvement.
+which stand out to me are ``Boldness" and ``Fun" \cite{CapValues}, it is these
+two that drive me to try out new things in the aim of team (and consequently
+self) improvement.
 
 Although individual, this project serves as no exception and offers an
 opportunity to experiment for the full duration of a project rather than a
@@ -177,10 +182,10 @@ be broken and experimentation will prevail:
    %TODO   currently an assumption and may be totally incorrect.
   \item Project Deliverables - The products of an academic project are usually
   completed in isolation or as part of a group and made available only upon
-  completion of the project. Experimenting with "Continuous Delivery",
+  completion of the project. Experimenting with ``Continuous Delivery",
   products of this project will be delivered whilst still undergoing active
-  development. This will enable 'faster feedback' from other Software
-  Engineers and produce a higher quality product
+  development. This will enable 'faster feedback' from stakeholders and
+  produce a higher quality product
   \item Open Source Everything - Capgemini consumes and
   produces a lot of open source software! With myself sitting within a team
   that are leading this drive, all code produced will be available under a MIT
@@ -190,7 +195,7 @@ be broken and experimentation will prevail:
   company and the wider development community. This project will follow that
   ethos and everything will be available online.
   \item Automation - Another of the JVM teams 'values'. Repetitive boring tasks
-  should be automated at the earliest possible chance! "Deployment should be a
+  should be automated at the earliest possible chance! ``Deployment should be a
    repetitive boring task" so this will be one of the first things tackled on
    each deliverable. This will allow its process to be tested and validated
    for every change made thereafter; reducing risk of failure later in the
@@ -199,30 +204,34 @@ be broken and experimentation will prevail:
 
 \subsection{Making Better Decisions}
 % TODO * reference Agile Manifesto
-Coming from a background in Agile projects, the "Agile Manifesto" has enabled
+Coming from a background in Agile projects, the ``Agile Manifesto" has enabled
 me to make and justify difficult decisions under pressure. For example deciding
  if a time constrained delivery should be moved into or out of the next
  sprint. One of the 'experiments' I wish to undertake is whether having such a
  manifesto makes a difference to a projects direction. With this in mind,
  within the evaluation I will discuss moments this was used and how I felt
  it affected the project. The manifesto for this project will be:
-\begin{itemize}
-  \item Making an impact over getting a good grade
-  \item Hypothesis’ and supporting evidence over guessing and assuming
-  \item "Start simple with many organic iterations" over "Upfront design"
-  \item Final Project over going to the pub
-\end{itemize}
+
+\begin{center}
+Making an impact over getting a good grade
+
+Hypothesis’ and supporting evidence over guessing and assuming
+
+``Start simple with many organic iterations" over ``Upfront design"
+
+Final Project over going to the pub
+\end{center}
 
 \subsection{A Process}
 Capgemini projects always follow a process to ensure a quality
-product is delivered and the speed is measurable and quantifiable to
+product is delivered with the speed being measurable and quantifiable to
 stakeholders and clients.
 
-This project will follow the Unified Process. The unified process gives a
-structure to different phases throughout the lifecycle of the project
-Inception, Elaboration, Construction and Transition. It enables iterations
-to occur within each of these phases but focuses the iteration towards the
-goal of the phase you are currently in.
+This project is no exception and will follow the Unified Process. The unified
+process. This gives a structure to different phases throughout the lifecycle of
+the project Inception, Elaboration, Construction and Transition. It enables
+iterations to occur within each of these phases but focuses the iteration
+towards the goal of the phase you are currently in.
 
 \subsubsection{Why the Unified Process?}
 
@@ -233,7 +242,7 @@ make it difficult to understand and report progress to myself and the
 stakeholders. Given the projects deliverables are well known from
 the outset Agile would only add unneccesary ceremonies.
 
-Using the manifesto above, the sprial model would satisfy "Start simple with
+Using the manifesto above, the sprial model would satisfy ``Start simple with
 many organic iterations", due to each turn of the spiral gaining user feedback
 and then using that feedback to direct new requirements. It's flexible enough
  and well structured for this project. What steered the project towards Unified
@@ -244,14 +253,50 @@ each spiral dedicated to risk analysis .
 
 \subsection{High Level Planning}
 % * TODO - GANTT CHART of initial plan
-** Insert Chart
+At a high level I was aiming for the following to be acheived:
+\begin{enumerate}
+  \item {Inception - February}
+    \begin{itemize}
+      \item Identify ways of working
+      \item Identify stakeholders
+      \item Go out to charities and users and find the most common issues they face
+      \item Identify the most common web ‘components’ (e.g. dialog)
+      \item Understand how accessibility issues can be identified (in the IDE,
+       in the browser?)
+      \item Gather tools for testing hypothesis’
+    \end{itemize}
+  \item {Elaboration - March/Start of April}
+    \begin {itemize}
+      \item Use tools to assess common web ‘components’ on a range of sites
+      \item Build these components as small web pages using common web frameworks.
+      \item Produce more accessible friendly versions of all components
+      \item Record and document the difference between how tools behave
+      against these components
+      \item Document how to’s and lessons learned
+      \item Build A11Y Guide
+    \end {itemize}
+  \item {Construction - April/May}
+    \begin{itemize}
+      \item Design system for identifying issues in code
+      \item Build \& Test a framework to enable identification of accessibility
+      issues
+      \item Build a small set of rules to demonstrate
+    \end{itemize}
+  \item {Transition - May}
+     \begin{itemize}
+        \item Document tool
+        \item Gather feedback
+     \end{itemize}
+\end {enumerate}
 
 \section{A Major Issue}
-Due to unforseen circumstances ~6 weeks of time was lost; the end
-of the elaboration, and most of the construction phase.
+Due to unforseen circumstances \textasciitilde6 weeks of time was lost;
+Mid-March through to the start of May. This covered the Elaboration, and
+Construction phase of the project. So it was clear a change in process would be
+necessary.
 
 \subsection{Change of process}
-The decision was made to change from the 'Unified Process' towards a more
+I chose to change from the 'Unified Process' towards a more
 prototypical/iterative process; 'Evolutionary Prototyping'. This is a form of
 the prototyping model which often suits tight time scales and fast development
 lifecycles. The 'Evoloutionary' aspect means rather than the prototype being
@@ -260,13 +305,7 @@ until a final product is produced.
 
 This method enables the code and project to carry some technical debt whilst
 still using continuous delivery. There is a higher
-risk to the quality of the product but as this is an individual process so I am in
+risk to the quality of the product but as this is an individual process I am in
 control of that and thus it will be consistent. All technical debt
 accumulated and areas for improvement will be documented in the
 deliverable/evaluation section respectively.
-
-\subsection{Change of plan}
-Due to lost time the plan also had to change. See below for the updated chart:
-
-** Insert Chart
-
