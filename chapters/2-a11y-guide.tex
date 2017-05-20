@@ -16,8 +16,8 @@ knowledgable enough to produce good content.
 \subsection{Planning}
 % TODO - Reference curve: http://www.wranx.com/ebbinghaus-and-the-forgetting-curve/
 
-As researched by Ebbinghaus in 1885 the forgetting curve demonstrates the
-amount of knowledge remembered after a period of time. see Fig.~\ref{fig:ebbinghaus}
+As researched by \citep{Ebbinghaus} in 1885 the forgetting curve demonstrates the
+amount of knowledge remembered after a period of time. See Fig.~\ref{fig:ebbinghaus}
 Repeating or revising the learning unsuprisingly results in the knowledge
 stored in memory for longer.
 
@@ -25,7 +25,7 @@ stored in memory for longer.
 \centering
 \includegraphics[width=0.5\textwidth]{figures/ebbinghaus}
 \captionsetup{justification=centering}
-\caption[Short figure name.]{Ebbinghaus' famous forgetting curve
+\caption{Ebbinghaus' famous forgetting curve
 \label{fig:ebbinghaus}}
 \end{figure}
 
@@ -45,22 +45,61 @@ as follows:
 \end{enumerate}
 
 As explicitly stated there will be four loops of observing, reviewing and
-applying the knowledge learned which should result in a peak knowledge level
+applying the knowledge learned which should result in a peak in knowledge
 when producing the tool.
 
 \subsection{Building A11Y Guide Requirements}
 In parallel to the above, for the guidance to have a greater impact it
 needs to be current, relevant and available. This will require some additional
 work to research the current direction the industry is moving and also the
-requirements of Capgemini's teams. To do this I propose issuing a
-questionnaire to my colleagues and using google trends to gain an
-understanding of the direction
-of front end web development.
+requirements of Capgemini's teams.
 
 \subsubsection{Understanding industry movement}
-% TODO
-% - Reference State of JS
+\label{sec:uim}
+The purpose of understanding the current industry is to ensure that the
+content within the guide is relevant and inline with the current status of the
+industry. By understanding where the industry had come from and where it was
+going would enable me to filter `old' resources from `new' resources and thus
+produce more relevant guidance. See \ref{sec:GatheringKnowledge} for more
+detail on the collection phase.
 
+Being an apprentice within the industry I have exposure to general movements
+and directions (through colleagues and self found sources), but primary
+evidence was required to back up my personal opinion.
+
+In 2016 the largest survey ever of front end developers was completed the
+'State of JS' \citep{StateOfJs}. This survey covered almost every aspect of the front end
+from javascript frameworks through tooling, all the way to testing frameworks.
+Participants were asked to categorise technologies into the following five
+pointers:
+ \begin{itemize}
+  \item `Used it before, would use again'
+  \item `Used it before, would not use again'
+  \item `Heard of it, would like to learn'
+  \item `Heard of it, not interested'
+  \item `Never heard of it'
+ \end{itemize}
+
+Based on my constant technology tracking I hypothesised that the technologies
+that were `Used it before, would use again' and `Heard of it, would like to
+learn' were the big winners in 2017. In Javscript frameworks this was ReactJs
+and Angular 2. Again this needed clarification so I chose to use `Google
+Trends' \citep{GoogleTrends} a tool which allows users to view graphs of
+search queries on a
+relative scale. During development most software engineers will
+refer to google for documentation and issues so I felt this was going to be a
+sound method for determining this. Fig.~\ref{fig:js_compare} confirms my
+hypothesis and shows how ReactJS overtook AngularJS with Angular 2 on the rise.
+
+\begin{figure}[H]
+\centering
+\centering
+\includegraphics[width=\textwidth]{figures/js_compare}
+\includegraphics[width=\textwidth]{figures/js_compare_key}
+\captionsetup{justification=centering}
+\caption{March 2017 Snapshot of JS Frameworks on Google Trends
+\label{fig:js_compare}}
+\end{figure}
 
 \subsubsection{Questionnaire}
 % TODO
@@ -68,61 +107,64 @@ of front end web development.
 % - Reference Remote working Capgemini
 % - Reference google forms
 
-Capgemini employees are typically engaged on client sites across the country
-resulting in the need for the questionnaire to be digital. To increase
-the possible respondants and not affect client work it will need to be
-completable in ~2-4 minutes. This will limit the number of questions and the
-type of questions that can be used. Quantitive questions often require less
-thought and have pre-populated answers and thus are likely to take less time
-than Qualatative to fill out.
+The questionnaire's purpose is to understand the frameworks, components and
+competencies in use across Capgemini. The next three paragraphs describe what
+I want to discover and why.
 
-The aim of the questionnaire is to gain a wider understanding of the
-frameworks, components and level of accessibility knowledge across a variety
-of software engineers that work in different areas (Front End, Java, PHP,
-etc). Due to the limited time for respondants to answer questions and the
-aim of the information I believe Quantative data is best for this purpose.
+The frameworks currently in use and those developers are competent in
+\ref{q:1}, \ref{q:2}. These will be used to backup the hypothesis' made in
+\label{sec:uim} and also enable me to feedback into my team on any gaps we
+have within the industry.
 
-Google Forms is to be used to implement the questionnaire due to its simple
-setup and integration into Google Spreadsheets which will make analysis
-simpler.
+Web Components client applications have in them \ref{q:5}. This will
+determine the order in which guidance is generated in the A11Y Guide.
+As I am aiming for continuous delivery, by adding the 'higher usage'
+components first I will be adding value from the most valuable to the least
+valuable.
 
-\textbf{Question 1 - What JS frameworks is your current project
-using?}
+The level of competency developers have in accessibility \ref{q:6}. This will
+help understand the level at which to pitch the guidance (The target audience)
+and will answer the question ``What level of competency can be assumed?". My
+aim is to use the National Health competency scale \citep{NHComptency} to
+asses this.
 
-This question is required to gather evidence of what frameworks clients are
-having Capgemini build their products in. The data produced from this
-question will be used to understand the current climate.
+Google Forms was used to implement the questionnaire due to its simple
+setup and integration into Google Spreadsheets which made the following
+analysis much easier.
 
-This question will be multi-choice with the option of adding 'other' in which
-case a textual box will be displayed. An answer will be required.
+Out of a possible 69 team members 40\% (26 members) responded.
 
-\textbf{Question 2 - What JS frameworks would you consider yourself
-competent in?}
+The first two questions showed how most software developers are using or are
+competent in either React or AngularJS. This with the fact that
+React was discovered as an upcoming technology in \ref{sec:uim} suggests the
+examples in the A11Y guide should be written in React and library
+recommendations made with this in mind. It is a fair assumption that
+developers competent in React should be able to apply the knowledge learned
+to Angular JS. Fig.~\ref{fig:current_proj} and Fig.~\ref{fig:competent_in}
+are bar charts of the results given. A suprise discovery was the popularity
+of JQuery as this is slowly becoming legacy.
 
-As the A11Y guide will hold coded examples there is a need to understand what
-frameworks developers are competent in. If they consider themselves competent
-they should be able to understand examples using it and apply them to their
-current project work. The answers to this will likely determine what
-framework is used when producing specific guidance.
+\begin{figure}[H]
+\centering
+\centering
+\includegraphics[width=\textwidth]{figures/questions/frameworks_in_use}
+\captionsetup{justification=centering}
+\caption{JS Frameworks Capgemini developers are using on current projects
+\label{fig:current_proj}}
+\end{figure}
 
-Similarly to above this question will use the same list of frameworks.
+\begin{figure}[H]
+\centering
+\centering
+\includegraphics[width=\textwidth]{figures/questions/frameworks_competent_in}
+\captionsetup{justification=centering}
+\caption{JS Frameworks Capgemini developers consider themselves comfortable in
+\label{fig:competent_in}}
+\end{figure}
 
-\textbf{Question 3 - Which of the following Styling Frameworks do you
-use/actively recommend ?}
+%TODO - Continue from here..
 
-Styling Frameworks add CSS and often developers copy and paste the examples
-given on the Styling Frameworks website. If people are using certain
-frameworks they may be inadvertently following some of the best practices. I
-want to name and shame the good and the bad frameworks for accessibility so
-new project set off on a good start.
 
-Also multi-choice and required.
-
-\textbf{Question 4 - What additional libraries are you using?}
-This will be a 'textual' input field and in the description users will be
-advised they can paste a 'package.json' file in (A common method of managing
-dependencies in a javascript project). This will be an optional question to
-promote people to complete the questionnaire.
 
 \textbf{Question 5 - What form items does your project use?}
 Coming back to relevancy for the A11Y guide, content will be produced for the
@@ -157,6 +199,7 @@ determine the depth to which the guidance goes into, and also it's
 recommended usage.
 
 \subsection{Gathering Knowledge}
+\label{sec:GatheringKnowledge}
 This section will describe the methods and results of gathering resources to
 be used to support the A11Y Guide.
 
