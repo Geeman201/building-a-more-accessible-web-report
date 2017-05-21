@@ -7,8 +7,8 @@ Before anything else, preparation is the key to success.
 \chapter{A11Y Guide}
 In preperation for the main deliverable a deeper level of knowledge in the
 accessibility space was required. To gain this knowledge and inline with my
-'Share Everything' approach it was decided that an 'Accessibility
-training guide' would be produced here on referred to as 'A11Y guide'. The idea
+`Share Everything' approach it was decided that an `Accessibility
+training guide' would be produced here on referred to as `A11Y guide'. The idea
 being that in producing a guide for others, oneself would have to be
 knowledgable enough to produce good content.
 
@@ -112,7 +112,7 @@ competencies in use across Capgemini. The next three paragraphs describe what
 I want to discover and why.
 
 The frameworks currently in use and those developers are competent in
-\ref{q:1}, \ref{q:2}. These will be used to backup the hypothesis' made in
+\ref{fig:current_proj}, \ref{fig:competent_in}. These will be used to backup the hypothesis' made in
 \label{sec:uim} and also enable me to feedback into my team on any gaps we
 have within the industry.
 
@@ -142,7 +142,8 @@ recommendations made with this in mind. It is a fair assumption that
 developers competent in React should be able to apply the knowledge learned
 to Angular JS. Fig.~\ref{fig:current_proj} and Fig.~\ref{fig:competent_in}
 are bar charts of the results given. A suprise discovery was the popularity
-of JQuery as this is slowly becoming legacy.
+of JQuery. This is likely due to its widespread usage historically as it is
+slowly becoming legacy.
 
 \begin{figure}[H]
 \centering
@@ -162,28 +163,51 @@ of JQuery as this is slowly becoming legacy.
 \label{fig:competent_in}}
 \end{figure}
 
-%TODO - Continue from here..
+The next two questions focussed on understanding the software components in
+use across client projects. An important aspect of many of our clients user base
+is data entry and it is vital that users of assistive tools can interact and
+understand these. The first question revolved around this and asked ``What
+form components are in use on your current project?". The next question was
+targeting more data consumption and higher level components so asked ``What
+web components are in use on your project".
 
+Unsuprisingly of the form components Fig.~\ref{fig:form_components}, textual
+inputs (23/26 respondants) were the highest with select menus (22/26) and
+validation messages (20/26) close behind. These would therefore be completed
+first in the A11Y guide.
 
+\begin{figure}[H]
+\centering
+\centering
+\includegraphics[width=\textwidth]{figures/questions/form_items}
+\captionsetup{justification=centering}
+\caption{Form components in use across Capgemini projects
+\label{fig:form_components}}
+\end{figure}
 
-\textbf{Question 5 - What form items does your project use?}
-Coming back to relevancy for the A11Y guide, content will be produced for the
-highest ranking form items first. This will ensure that if the guide is not
-100\% complete it will still likely add a lot of value to Capgemini.
+At a data consumption level there was a small anomoly in the data. `Images'
+had accumulated 27/26 respondants. Due to the small sample size I dug into the
+raw data and discovered that the `Images' option appeared twice on the
+possible answers. With manual counting of this value, the correct number
+of respondants was actually 17/26.
 
-This question will be multi-choice and list a range of different methods of
-user input
+With images now normalised Navbars, Tabs, and Images all had 17/26 usages.
+These were shortly followed by Dialogs (16/26) and Tables (16/26). Fig
+.~\ref{fig:components_in_use} shows the full results.
 
-\textbf{Question 6 - What Web Components does your project use?}
-Similar to above accept it is probably within the scope of this project that
-only the highest ranking six will have guidance produced. This may be
-completed however after the project.
+\begin{figure}[H]
+\centering
+\centering
+\includegraphics[width=\textwidth]{figures/questions/components_in_use}
+\captionsetup{justification=centering}
+\caption{Web components in use across Capgemini projects
+\label{fig:components_in_use}}
+\end{figure}
 
-\textbf{Question 7 - What level would you consider your web accessibility
-level?}
-This question aims to have the developer place themselves on the NIH
-Proficiency Scale. It will have some additional guidance to help them
-position themselves:
+The final quesion asked each individual to rate themselves on the National
+Health competency scale \citep{NHComptency}. I added some additional guidance
+to the different levels to try and get a consistent answer across the
+participants.
 \begin{itemize}
 \item None
 \item Fundamental Awareness - Know what it is, but not how to implement it
@@ -191,12 +215,23 @@ position themselves:
 \item Intermediate - Can implement with help and has experience testing with tools such as JAWS, Dragon
 \item Advanced  - Can implement without help, understands \& explains how.
 Knows best practice
-\item Expert - The 'go to' person for web accessibility
+\item Expert - The `go to' person for web accessibility
 \end{itemize}
 
-This is probably the most important question. The answers to this will
-determine the depth to which the guidance goes into, and also it's
-recommended usage.
+Due the questionnaire being anonymous it is a fair assumption that honest
+answers are more probable. It is interesting how 18/26 ~70\% of respondants
+have had no experience with the testing tools and rely upon Google to
+understand accessibility. Fig.~\ref{fig:a11y_level} once again highlights
+the requirement a project around accessibility is required at Capgemini.
+
+\begin{figure}[H]
+\centering
+\centering
+\includegraphics[width=\textwidth]{figures/questions/a11y_level}
+\captionsetup{justification=centering}
+\caption{Accessibility competency level across employees.
+\label{fig:a11y_level}}
+\end{figure}.
 
 \subsection{Gathering Knowledge}
 \label{sec:GatheringKnowledge}
@@ -206,11 +241,11 @@ be used to support the A11Y Guide.
 \subsubsection{Method}
 I chose to apply a method to ensure consistency and quality. The first and
 simplest method I experimented with was to collate the top five results from
-'Google'. This was the obvious and quickest method to gather such information
-however, after reviewing resources in 'Links' and 'Buttons' items which I am
+`Google'. This was the obvious and quickest method to gather such information
+however, after reviewing resources in `Links' and `Buttons' items which I am
 personally familiar with. I found a lot of overlap between content and after
 testing them with the tools, similar mistakes across all of them.
-None seemed to capture the 'why' which naturally meant I needed a
+None seemed to capture the `why' which naturally meant I needed a
 different method.
 
 To produce a new method I started by understanding what I needed to know to
@@ -233,7 +268,7 @@ use the three best scoring resources in my content.
 
 
 \subsubsection{Outputs}
-Inline with my 'Open Source' and 'Share Everything' ethos the resources were
+Inline with my `Open Source' and `Share Everything' ethos the resources were
 sorted based upon their content and placed upon my github account in a public
  repository.
 See Fig \ref{fig:allyLinksDemo}.
@@ -244,18 +279,18 @@ considered the v1.0.0 of my A11Y Guide.
 \centering
 \includegraphics[width=\textwidth]{figures/documentation_link_example}
 \captionsetup{justification=centering}
-\caption{A demonstration of the 'Navigation' content on Github.
+\caption{A demonstration of the `Navigation' content on Github.
 https://github.com/Geeman201/a11y-links/
 \label{fig:allyLinksDemo}}
 \end{figure}
 
 
 \subsubsection{Defining Requirements}
-% TODO - Reference Dan North https://dannorth.net/whats-in-a-story/
+\label{sec:requirements}
 From the questionnaire, common web frameworks, knowledge gained from the
 resources and inline with my manifesto I started to write down concrete
-requirements. I used Dan North's "What's in a Story" method to write the
-requirements. I find this method gives both 'the what' and 'the why' which
+requirements. I used \cite*{DanNorth}'s ``What's in a Story" method to write the
+requirements. I find this method gives both `the what' and `the why' which
 enables a better decision making process to be followed. As an additional
 benefit in this format I have a solid means by which I can evaluate the
 solution later.
@@ -266,8 +301,8 @@ solution later.
  As a developer \\
  \hline
  I want to have a section highlighting the most important aspects I need to
- understand \\
- So that when I come to refresh my skills I only have to read that section  \\
+ take on board \\
+ So that when I can quickly apply them on my current project \\
  \hline
  I want to have coded examples written in React \\
  So that I can understand and apply the knowledge \\
@@ -283,28 +318,27 @@ solution later.
 
 \section{Deliverable}
 % TODO -
-% Reference Markdown -
 % Reference Github - https://github.com/open-source
 \subsection{Iteration 1 - Create content using markdown}
 The first iteration of developing content was targetted the broader aspects
-which affect every part of the experience. This covered page structure,
+which affect every part of the users experience. This covered page structure,
 page content and other general aspects like typography and colour. The content was produced
-using markdown.
+using Markdown \citep{Markdown}.
 
 \subsubsection{Why Markdown?}
-Markdown was chosen as it is fast becoming the 'developer standard' for writing
+Markdown was chosen as it is fast becoming the `developer standard' for writing
 documentation. When producing content, familiarity is key to producing an
 enviornment in which people will collaborate. If you first have to
 learn a new language or tool the barrier to entry to produce the content is
-higher and thus you are less likely to do it. As Github the 'worlds biggest'
-software control platform has bought into markdown as way developers communicate
-'most' developers have at least some knowledge in the area. If they do not,
-the documentation for using markdown is well estabilished.
+higher and thus you are less likely to do it. As Github the `worlds biggest'
+\citep{GithubBig} software control platform has bought into markdown as way
+developers communicate `most' developers have at least some knowledge in the
+area. If they do not, the documentation for using markdown is well estabilished.
 
 An additional benefit to using markdown is it is relatively difficult to make
-the content you produce "Inaccessible". As I want the guide to demonstrate
+the content you produce ``Inaccessible". As I want the guide to demonstrate
 best practices; it should really be following them. Markdown compilers are
-great at transforming content into 'assistive tool' friendly HTML.
+great at transforming content into `assistive tool' friendly HTML.
 
 Fig \ref{fig:hierarchy} and Fig \ref{fig:structures} demonstrates how the
 content is displayed in github's standard folder view. The markdown text is
@@ -315,7 +349,7 @@ converted into HTML and displayed in a clear well structured manner.
     \begin{subfigure}[b]{0.25\textwidth}
         \includegraphics[width=\textwidth]{figures/documentation_md_example_1}
         \captionsetup{justification=centering}
-        \caption{The File Hierarchy of 'Content' section}
+        \caption{The File Hierarchy of `Content' section}
         \label{fig:hierarchy}
     \end{subfigure}
     \qquad
@@ -324,47 +358,54 @@ converted into HTML and displayed in a clear well structured manner.
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{figures/documentation_md_example_2}
         \captionsetup{justification=centering}
-        \caption{The 'structures.md' file rendered in the browser}
+        \caption{The `structures.md' file rendered in the browser}
         \label{fig:structures}
     \end{subfigure}
 \end{figure}
 
 \subsection{Iteration 2 - UI Design \& Build site}
-I wanted the UI to be simple and follow all the best practices it recommends.
-As I had written some content it made it easier to experiment and understand
-what was needed. The content was structured almost as a hierarchichal tree so
-some sort of accordian type navigation would be useful. The audio snippets
-would need to supplement the main content. The code snippets
-would need to be embeddedable in the page.
+This iteration focussed on taking the content I had produced and turning it
+into an easily consumable website. Using this content and the requirements set
+out in \ref{sec:requirements} the design would need to support:
+\begin{itemize}
+\item Coded Examples (Prefferably with snippet highlighting)
+\item Snippets of the assistive tools reaction to good/bad markup
+\item Navigation for a hierarchical structure
+\item The best practices it describes
+\end{itemize}
 
-I used moqups to produce a three different designs.
-% TODO
-% - Reference mockups
-Design 1:
+I chose to split the page into three sections as shown in Fig
+.~\ref{fig:sections}. The first contained navigation. The second the main
+content and coded examples. The third any 'additional information' such as
+audio snippets and 'noteworthy' elements.
 
-Design 2:
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/a11y_guide_design}
+\captionsetup{justification=centering}
+\caption{An example of the design built using \cite*{Moqups}
+\label{fig:a11y_guide_design}}
+\end{figure}
 
-Design 3:
-
-I chose design...
-
-From the user interface design I produced a system design See Fig
-\ref{fig:allycomponent}. As the content was held in markdown files the
-dcumentation framework would only have to parse the markdown and generate a
-navbar and HTML. The idea was to enable the documentation framework
-to be reused by abstracting the framework away from the content itself. For a
-user of the documentation framework, I wanted them to only have to edit the
+Using the content I had I produced a system design See Fig
+.~\ref{fig:allycomponent}. As the content was held in markdown files the
+documentation framework would have to parse the markdown and generate a
+navbar and HTML. The idea was to enable the documentation framework to be
+reused by abstracting the framework away from the content itself. For a user
+of the documentation framework, I wanted them to only have to edit the
 content and/or the Table of Contents. This would enable content to be the
-users main focus and thus speed up the development of the guide.
+users main focus and thus speed up the development of content for the guide.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.65\textwidth]{figures/documentation_design}
 \captionsetup{justification=centering}
-\caption[Short figure name.]{Component Diagram for A11Y Guide
+\caption{Component Diagram for A11Y Guide
 \label{fig:allycomponent}}
 \end{figure}
+
 A table of contents was
-chosen rather than browsing folder structures so that users
+chosen rather than automatically loading folder structures so that users
 could be in control of the ordering on the navbar. The table of contents
 would be a JSON array with each object containing the following data:
 \begin{itemize}
@@ -375,21 +416,39 @@ would be a JSON array with each object containing the following data:
 \end{itemize}
 A side effect of this design which was only realised in Iteration 4 was the
 added benefit of extensibility and customisability of labels, url paths and
-components. See \ref{sec:iteration_4} for how this design enabled custom
+components. See Section \ref{sec:iteration_4} for how this design enabled custom
 components to be used.
+
+The web app was built using 'create-react-app' \citep{CreateReactApp} a tool
+built by facebook for enabling the quick production of React web applications.
+When the CLI tool runs it generates a basic web application with some sample
+code. To reduce the risk later and following the continous delivery
+guidelines \citep{ContinuousDelivery} I decided now was a good time to set up
+my deploy pipeline. Fig.~\ref{fig:cd_pipeline} demonstrates the pipeline
+through a sequence diagram.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/deploy_pipeline}
+\captionsetup{justification=centering}
+\caption{Upon Commit, the project is built/tested before being deployed to
+Github Pages
+\label{fig:cd_pipeline}}
+\end{figure}
 
 \subsection{Iteration 3 - Continue content}
 As described by the title this iteration focussed on producing more content;
-specifically around forms and components.
+specifically around the forms and components identified in the questionnaire.
+With the continuous deployment pipeline setup changes were instantly
+consumeable at \url{https://geeman201.github.io/geemans-a11y-guide/}
 
 \subsection{Iteration 4 - Recognise/Implement custom pages}
 \label{sec:iteration_4}
-The more content that was written the greater the need for the ability to
-insert custom content. I was finding myself working around the drawbacks of
-markdown when creating examples with custom HTML, JS and CSS. This became a
-real problem when filling out content for the components section. I decided
-to alter the code to enable React Components to be injected. How these
-slotted into the design is
+When producing examples for dialogs and tabs the
+need for the ability to insert very custom code surfaced. I was finding myself
+hacking around in complex markdown which was difficult to understand. I decided
+to alter the documentation framework to enable React Components to be injected.
+How these slotted into the design is
 shown in \ref{fig:allycomponent_2}. Note how the rest of the documentation
 framework didn't have to change!
 
@@ -397,100 +456,41 @@ framework didn't have to change!
 \centering
 \includegraphics[width=0.65\textwidth]{figures/documentation_design_2}
 \captionsetup{justification=centering}
-\caption[Short figure name.]{Component Diagram for A11Y Guide with added JSX
+\caption{Component Diagram for A11Y Guide with added JSX
 component loader highlighted in blue.
 \label{fig:allycomponent_2}}
 \end{figure}
 
 \subsection{Iteration 5 - Continue content}
-This iteration involved adding coded examples to areas where markdown was not
-appropriate.
+This iteration involved returning to the pages which required custom
+components. Dialogs and Tabs were completed and I also returned to the form
+pages to add some additional examples.
 
 \subsection{Iteration 6 - Generify}
 This iteration focussed on extracting the common documentation framework that
 had been produced. Removing the content and setting up a different repository
 which others could clone and create their own documentation from.
 
-\section{Extending the impact}
-\subsection{Markdown/React Documentation Framework}
-\subsection{Colour Contrast Tool}
-% TODO
-%  * Refernce CSS in JS
-%  * Reference Anti CSS in JS movemtn
-%  * Reference Max
-Whilst I was creating the A11Y Guide I was asked to experiment with an
-upcoming piece of technology. "CSS in JS". The industry has been moving
-towards 'component driven' development through the entrance of Angular and
-ReactJS; CSS in JS is the last step in all code relating to a
-component being co-located in a single file. Myself like others had had
-significant reservations about the performance and portability of such an
-idea. However, working for a technology consultancy firm we are advised to
-form an opinion on any impacting changes within our retrospective spaces.
-
-% TODO - Reference Juicy Studio/Snook
-Having done research into colour contrast tools I identified a gap for a
-"modern", user focussed tool. Most current tools require submission to a
-server and lack demonstrations of what the two colours look like when used
-together. All of them satisfied a relatievly simple set of requirements:
-\begin{itemize}
-\item Report the colour contrast level between two distinct colours
-\item Report whether the colours contrast level of such colours satisfies the
- WCAG guidelines for the "wanted" text size.
-\end{itemize}
-
-%TODO - Reference Moqups
-Using Moqups again I quickly put together a quick design using their colour
-schemes and fonts See \ref{fig:colour_contrast_1}. To test out "CSS in JS" I
-wanted to use 'Styled Components' a ReactJS implementation written by Max
-Stoblier. ``Create React App" a tool for bootstrapping a React project was also
-used. This was only an `experiment' and thus to be completed quickly, testing
-was reduced to cover only the core logic for calculating colour contrast.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.65\textwidth]{figures/colour_contrast_1}
-\captionsetup{justification=centering}
-\caption{Design for Colour Contrast tool
-\label{fig:colour_contrast_1}}
-\end{figure}
-
-The 'Happy Day' user journey would be:
-\begin{itemize}
-\item User enters first colour in input field (Can paste)
-\item User enters second colour in input field
-\item On a valid colour entered. Both are displayed as background and
-foreground; the value of colour contrast is displayed; and the contrast
-levels WCAG appropriateness is displayed in the circles. Green for success, Red
-for failure.
-\end{itemize}
-
-In the error scenario of a user entering an invalid colour, the background
-colours would remain the same and the input field would have a 'red'
-background and border to signify an error.
-
-% TODO - discuss Travis CI for report writing
-% TODO - discuss Branching model
-% TODO - discuss any Standards
 
 
-Principally, this chapter should describe the work that was undertaken before
-code was written, hardware built, theories worked on, or research studies
-executed. It should show how the project proposal was further refined and
-clarified, so that the implementation/research execution stage could go
-smoothly rather than by trial and error. This part of the report is attempting to
-prove that you went through a planning process before embarking on the
-deliverable so among others it might include discussion of:
-
-1. For software projects, a requirements analysis, HCI designs, architectural
-and use-case diagrams, etc.
-2. Any programming languages learnt, any complicated theories or algorithms
-that required understanding
-3. For research-based projects, the research approach (experimental design,
-where applicable), including methods and tools that were used/applied. If the
-research method involves the development of prototypic software to test a
-concept, briefly describe the design, structure, and creation of this software.
-Research methods should be described such that a third party could replicate
-the study/experiment to validate the results.
-
-This section should be answering the question “How did I plan to achieve the
-deliverable?”
+%Principally, this chapter should describe the work that was undertaken before
+%code was written, hardware built, theories worked on, or research studies
+%executed. It should show how the project proposal was further refined and
+%clarified, so that the implementation/research execution stage could go
+%smoothly rather than by trial and error. This part of the report is attempting to
+%prove that you went through a planning process before embarking on the
+%deliverable so among others it might include discussion of:
+%
+%1. For software projects, a requirements analysis, HCI designs, architectural
+%and use-case diagrams, etc.
+%2. Any programming languages learnt, any complicated theories or algorithms
+%that required understanding
+%3. For research-based projects, the research approach (experimental design,
+%where applicable), including methods and tools that were used/applied. If the
+%research method involves the development of prototypic software to test a
+%concept, briefly describe the design, structure, and creation of this software.
+%Research methods should be described such that a third party could replicate
+%the study/experiment to validate the results.
+%
+%This section should be answering the question “How did I plan to achieve the
+%deliverable?”
