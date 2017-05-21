@@ -150,7 +150,7 @@
 \setcounter{secnumdepth}{3}
 
 % Front matter.
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \usepackage[titles]{tocloft}
 \usepackage[titletoc]{appendix}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -243,12 +243,12 @@
 \renewcommand{\frontmatter}{
 	\input{frontmatter/personalize}
 	\maketitle
-	\copyrightpage
+	 % \copyrightpage
 	\abstractpage
 	\tableofcontents
 	% \listoffigures % optional
-	\dedicationpage
-	\acknowledgments
+	 % \dedicationpage
+	 % \acknowledgments
 }
 
 \renewcommand{\maketitle}{

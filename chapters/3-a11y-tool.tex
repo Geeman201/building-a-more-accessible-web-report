@@ -1,7 +1,7 @@
 %!TEX root = ../dissertation.tex
 \begin{savequote}[75mm]
-Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo.
-\qauthor{Quoteauthor Lastname}
+``We can change our tools and then our tools change us"
+\qauthor{Jeff Bezos - Entrepreneur}
 \end{savequote}
 
 \chapter{A11Y Tool}
@@ -12,31 +12,30 @@ the feedback loop (and thus the price) of discovering accessibility issues. To
 keep the project to a sensible scope the tool will form the "means" by which
 accessibility testing could be undertaken but will be limited in the number
 of accessibility issues it will identify.
-
 \section{Preparation}
-\subsection{Current Process}
-The current projects
 
-\subsection{Understanding current solutions}
-Prior to building my own I wanted to survey the current landscape of
-accessiblity tools. Thanks to the A11Y Guide I had already collected a list of
-current testing tools. All but one of the tools target the browser through a
-bookmarklet.
+\subsection{Current Solutions and Process}
+Prior to building the tool a survey of the current landscape of
+accessiblity tools was undertaken. When producing the A11Y guide list of
+current testing tools had been collated which made this step relatively easy.
+The table below shows the good/bad points surrounding each tool.
+Interestingly all but one of the tools (highlighted) targets the browser
+through a bookmarklet.
 
 \begin{table}[h!]
 \centering
 \begin{tabular}{ |c|c|c|c| }
  \hline
- Tool & Method & Good & Bad  \\
+ Tool & Good & Bad  \\
  \hline
  \hline
- Axe Core & Bookmarklet/Extension &  & a \\
+ Axe Core  & a \\
  \hline
- HTML Code Sniffer & Bookmarklet & b & b \\
+ HTML Code Sniffer & b & b \\
  \hline
- ESLint JSX A11Y & IDE/CLI & c & c \\
+ ESLint JSX A11Y (IDE) & c & c \\
  \hline
- Tota11y & Bookmarklet & d & d \\
+ Tota11y & d & d \\
  \hline
 \end{tabular}
 \end{table}
@@ -44,7 +43,7 @@ bookmarklet.
 \subsection{What makes this tool different?}
 
 
-\subsubsection{Browser vs IDE}
+\subsection{Browser vs IDE}
 Two possible methods for identification of issues
 
 The browser was chosen because
@@ -54,7 +53,8 @@ The browser was chosen because
 
 \subsection{Defining Requirements}
 
-\subsection{Design}
+\section{Design \& Deliverable}
+\subsection{General}
 Fig.~\ref{fig:tool_current_design} demonstrates the rough design for most of
 the current tools (Tota11y, EsLint). They typically have tightly coupled
 components for applying rules and displaying results which limits the way in
@@ -77,7 +77,7 @@ Fig.~\ref{fig:tool_proposed_design} demonstrates how I propose to apply
 this. Components shown in grey demonstrate the possiblites which are opened
 by using such a design but are out of scope of this project. The next few
 sections in the report will document the design and implementation of each of
-the components within scope of the project..
+the components within scope of the project.
 
 \begin{figure}[H]
 \centering
@@ -87,24 +87,26 @@ the components within scope of the project..
 \label{fig:tool_proposed_design}}
 \end{figure}
 
-\subsubsection{A11Y Core}
+\subsection{A11Y Core}
 This component offers the fundamental building blocks which enable the
-others to function. It defines interfaces and common implementations. It is
-broken down into a `Checker', `Result' and `Worker'.
+others to function. It defines interfaces and common implementations and
+is broken down into a `Checker', `Result' and `Worker' as well as a 'Runner'
+for executing and returning results.
 
 %TODO - Reference Semantic Versioning
 Due to other components relying upon A11Y Core's interfaces, versioning of
-them is important to ensure dependent parties are able to update efficiently.
-There are many versioning strategies available and most work on a form of
-three digits [major].[minor].[patch]. I always use `Semantic Versioning'
-due to the clear definition of when each number should increment. Patch for
-bug fixes and non api, Minor for API additions which are backwards compatible
-and Major when a breaking API change is introduced. Due to this clarity it is
-slowly becoming the defacto standard for software development.
+the api it exposes is important to ensure dependent parties are able to update
+efficiently. There are many versioning strategies available and most work on
+a form of three digits [major].[minor].[patch]. I always use `Semantic
+Versioning' due to the clear definition of when each number should increment.
+Patch for bug fixes and non api changes, Minor for API additions which are
+backwards compatible and Major when a breaking API change is introduced. Due to this
+clarity it is slowly becoming the defacto standard for software development
+so is likely to be familiar to others.
 
 A `Checker' offers a method to check content for issues and give detail
 about what they are checking for. Fig.~\ref{fig:checker_design} documents the
-initial design for `Checker' and its various implementations.
+initial design for `Checker' and its various child implementations.
 
 \begin{figure}[H]
 \centering
@@ -140,12 +142,14 @@ export default class Checker {
 \end{lstlisting}
 
 The `Result' class is an outcome of a `Checker'. They hold the node or element
-the `checker' checked and the state either Success, Warn, Info or Error.
+the `checker' checked and the state, Success, Warn, Info or Error.
 Error and Warn have an additional property of
 remediation which is to be added by the `Checker' to offer a recommended
-method to fix the identified issue. Fig.~\ref{fig:result_design} demonstrates
-this structure. It is unlikely that anyone would extend `Result' but similar
-to above it has been implemented with interfaces.
+method to fix the identified issue. This coupling allows for the remediation
+to be specific to the exact issue found by the checker. Fig
+.~\ref{fig:result_design} demonstrates `Results' inheritance structure. It is
+unlikely that anyone would extend `Result' but similar to above it has been
+implemented with interfaces.
 
 \begin{figure}[H]
 \centering
@@ -178,7 +182,7 @@ shows how this works.
 \label{fig:a11y_tool_worker_design}}
 \end{figure}
 
-\subsubsection{WCAG Checker Pack}
+\subsection{A11Y WCAG Checker Pack}
 As shown in Fig.~\ref{fig:a11y_tool_worker_design} above `Checker Packs' are
 a collection of `Checkers' loaded into a single file. The requirement for a
 'Checker Pack' comes from the fact that the accessibility requirements on
@@ -196,7 +200,7 @@ import 'checkers/WCAG/TableCaptionChecker.js
 
 %TODO - Complete this..
 
-\subsubsection{A11Y Browser}
+\subsection{A11Y Browser}
 The browser component enables the tool to be ran within a web browser (Tested
 on Chrome 57). Fig.~\ref{fig:a11y_tool_browser_design} shows how this fits in
 at a high level.
