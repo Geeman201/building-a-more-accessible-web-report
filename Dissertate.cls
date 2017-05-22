@@ -327,6 +327,7 @@
 		\begin{appendices}
         \input{chapters/appendixA}
         \input{chapters/appendixB}
+        \input{chapters/appendixC}
     \end{appendices}
     \input{endmatter/colophon}
 }

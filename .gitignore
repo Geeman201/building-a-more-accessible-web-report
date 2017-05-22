@@ -2,7 +2,7 @@
 *.toc
 *.out
 *.log
-*.pdf
+dissertation.pdf
 *.blg
 *.bbl
 .logged
