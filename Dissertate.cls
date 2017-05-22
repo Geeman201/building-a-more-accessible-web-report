@@ -74,6 +74,7 @@
 \RequirePackage{lettrine}
 \RequirePackage{setspace}
 \RequirePackage{verbatim}
+\usepackage{pdfpages}
 
 % Figures
 \usepackage{float}
@@ -325,6 +326,7 @@
     \addcontentsline{toc}{chapter}{References}
 		\begin{appendices}
         \input{chapters/appendixA}
+        \input{chapters/appendixB}
     \end{appendices}
     \input{endmatter/colophon}
 }
