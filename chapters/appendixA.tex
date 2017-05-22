@@ -2,4 +2,79 @@
 \chapter{Project Instructions}
 \label{AppendixA}
 
-The CD is formed of three directories
+The CD is formed of three directories:
+\begin{itemize}
+\item src - This contains the raw code for the deliverables pulled straight
+from github each project contains a README on how to build and execute it.
+Both have a prerequisite on npm or yarn and an internet connection if you
+wish to install them on your local pc.
+\item build - This contains built versions of the deliverables which can be
+hosted on a static HTTP server. It is important to note that they must be
+hosted at the root directory. Opening index.html for each in a browser will
+give you the full content.
+ \begin{itemize}
+  \item A11Y Guide - This is also available at
+  \item A11Y Tool -
+ \end{itemize}
+\item report - This contains the report
+\end{itemize}
+
+\section{Viewing prebuilt artifacts}
+\subsection{A11Y Guide}
+There are few different methds for viewing the artifacts.
+
+\subsubsection{View the version from Continuous Deployment}
+It is available at: \url{https://geeman201.github.io/geemans-a11y-guide}
+with the source being available at: \url{https://github.com/Geeman201/geemans-a11y-guide}
+
+\subsubsection{Using a PHP server}
+\begin{enumerate}
+\item Navigate to the build/A11Y-Guide directory
+\item If you have PHP install execute 'php -S localhost:8000'
+\item Navigate to localhost:8080/
+\end{enumerate}
+
+\subsubsection{Using a node server}
+\begin{enumerate}
+\item Navigate to the build/A11Y-Guide directory
+\item Install a server using 'npm install -g serve'
+\item Execute 'serve -s .'
+\item Navigate to localhost:5000/
+\end{enumerate}
+
+\subsection{A11Y Tool}
+To demonstrate the tools capability included is html file which allows runs
+the tests against itself.
+\subsubsection{Through an example page}
+\begin{enumerate}
+\item Follow the instructions above to start HTTP server but in the
+build\\A11Y-Tool directory
+\item Open a browser
+\item Navigate to localhost:5000/
+\item If you observe a page loading with a report in the top right corner it
+is successfully working.
+\end{enumerate}
+
+\subsubsection{Inject it via the devtools}
+\begin{enumerate}
+\item Follow the instructions above to start HTTP server but in the
+build\\A11Y-Tool directory
+\item Open a browser
+\item Open the browsers devtools
+\item Execute the command shown below to insert a script element pointing at
+the deployed instance
+\item Observe the tool running against your page
+\end{enumerate}
+
+\begin{lstlisting}
+(function(){var head=document.getElementsByTagName('head')[0],script=document
+.createElement('script');script.type='text/javascript';script
+.src='http://localhost:8000/static/js/main.3d588863.js';head.appendChild
+(script);})();
+\end{lstlisting}
+
+
+\section{Building Artifacts}
+Both artifacts are built using yarn and npm and thus going into their
+retrospective directories and running either `yarn build' or `npm run build'
+will result in the project building a fresh version.
