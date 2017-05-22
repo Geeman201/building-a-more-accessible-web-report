@@ -6,46 +6,185 @@ finally accomplish"
 \end{savequote}
 
 \chapter{Evaluation}
+This chapter will provide a critical evaluation of the projects journey and
+the deliverables that were produced. In terms of following a method each
+deliverable will be evaluated using my manifesto (Section
+\ref{sec:manifesto}) and the following questions:
+\begin{enumerate}
+\item Did it meet the requirements? How?
+\item How could it be improved? Why?
+\item What impact did it make?
+\item What the future holds
+\end{enumerate}
 
 \section{A11Y Guide}
-- Usability
-- To do it again?
-- John Quote
-- Good/Bad?
+\subsection{Meeting requirements}
+This section will evaluate against the requirements set out in section
+\ref{sec:requirements} and will describe success and/or shortcomings.
+
+\begin{center}
+\textit{``I want to have a section highlighting the most important aspects I
+need to take on board"}
+\end{center}
+I am satisfied that this requirement has been fulfilled. After an
+introductory paragraph each piece of guidance has an 'Essentials' section
+which documents the most important things developers should do. This is then followed
+by a collection of resources to allow users to gain a deeper understanding.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/guide_essentials}
+\captionsetup{justification=centering}
+\caption{`Essentials' section for select menus
+\label{fig:guide_essentials}}
+\end{figure}
+
+\begin{center}
+\textit{``I want to have coded examples written in React"}
+\end{center}
+Due to the nature of the topic this requirement is difficult to
+measure. Most of the examples written used react as a means to demonstrate
+good and bad practice. An improvement that I worked in during Iteration 4 was
+to enable the documentation framework to embed examples. This was really
+impactful as it enables developers to see the code, the result, and the
+snippet of the tool.
+A problem I had was it was difficult to pitch a `component' at the write
+level for users as I was
+unsure what they would do with it. Would they use it as is? Would they just
+take the HTML? Would they just read and understand it? Perhaps some additional
+research into how users would use the coded examples would have allowed for
+more meaningful examples.
+
+\begin{center}
+\textit{``I want to have assistive tool examples of different markups"}
+\end{center}
+This was implemented mainly through subtitles in the side bar as shown in Fig
+.~\ref{fig:a11y_guide_assistive_tool_snippet}. I felt it demonstrated really well the difference
+in what applying good semantics can make to the experience of assistive
+tools. The deliverable faultered in demonstrating tools other than those for
+the visually/motor impaired. By including examples from other tools a richer
+understanding could have been given.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/a11y_guide_assistive_tool_snippet}
+\captionsetup{justification=centering}
+\caption{Example of JAWS snippet for input's
+\label{fig:a11y_guide_assistive_tool_snippet}}
+\end{figure}
+
+
+\begin{center}
+\textit{``I want relevant links available"}
+\end{center}
+I feel this requirement was fully satisfied. For every part of the guide a
+collection of at least three useful links was included. Because I followed a
+method for collecting the resources (Section \ref{sec:GatheringKnowledge}) and
+in many cases used them myself to understand various topics I am confident
+that thier content is of high quality.
+
+In hindsight assessing each link in this way was extremely time consuming and
+resulted in only slightly better content. But it means the guide makes a good
+reference document for each topic.
+
+\subsection{Impact}
+\subsubsection{Personal \& Business}
+From a personal level I have found this deliverable extremely useful! I
+actively use the content and best practices it documents in most of my day to
+day work. When discussing with colleagues accessibility and my expertise on
+accessibility I have been able to refer to this to backup claims and
+suggestions I make.
+
+From a business perspective the guide targets the frameworks and components
+which are used across current Capgemini projects. The real impact will
+only be seen as a greater period of time goes by. Tom Brown a 'Test lead` said
+the following about the guide and its contents.
+
+\begin{center}
+\textit{``The guide gives a great overview of how to fix the common issues we
+often identify during assistive tool testing. Typically when we show developers
+how the tools behave they are keen to fix the problems they have made. It is
+good to see the demosntrations of how the tools behave."}
+\end{center}
+
+Being an employee of Capgemini and this work been available in the public
+domain it is possible that this work will result in a reputation gain as
+Capgemeni being a 'leader' in accessible research and writing inclusive
+software.
+
+\subsection{Future}
+The conclusion of this project will not be the end of the guide. I plan on
+adding more content and using it as a means of demonstrating my skills to the
+wider development community and potential employers.
 
 \section{A11Y Tool}
--
-- Pluggability
-- Future vision
+Similar to the A11Y Guide this section will evaluate against the requirements
+defined in section \ref{ref:requirements}
 
-\section{Ways of working}
-- Hypothesis result
-- Manifest
-- Iterative
+\subsection{Meeting requirements}
+\begin{center}
+\textit{I want to be able to customise the ruleset}
+\end{center}
+Through the introduction of `checker packs' this requirement has been
+achieved. A checker pack is defined through a single Javascript which uses
+ES6 import statements although realtively clean an alternate 'nicer' way in
+which these could have been achieved was through a json file
 
-\section{Personal reflections}
-- Retrospective format
-- Proud
+\begin{center}
+\textit{I want to be able to run the tool through multiple methods}
+\end{center}
+Evidence of this being possible is relatively limited but the high level
+design of the tool demonstrates how it could be done. With A11Y Core being
+seperate to A11Y Browser wrapping the core module in a CLI runner for tools
+like jenkins should relatively easy.
 
+\begin{center}
+\textit{I want to be able to have errors categorised}
+\end{center}
+The A11Y core module returns all results from every checker. Error, Warning,
+Info and Success. It is then up to the consuming module to handle these. The
+A11Y Browser module filters this list to only contain Errors and Warnings and
+then displays them in a `report' to the user as demonstrated in
+Fig.~\ref{fig:a11y_tool_report}. Inline with many other applications Yellow
+means warning and Red means error.
 
-\newthought{Realistic evaluation is a vital part of a good project report.}
-For software projects, describe the evaluation methods used; discuss reliability
-and usability of the end-product; where appropriate, obtain client views. To
-what extent have the specified objectives of the project been met? How
-successful and appropriate was the methodology adopted? Wherever possible,
-support your views with evidence.
-For research projects, discuss the merit of research methods/approaches
-employed; if you didn’t already do so in your Deliverable chapter, compare the
-merit of your methods, where applicable, with other possible alternatives,
-Consider the limitations of the research, including limitations on the
-generalisability of the results obtained/recommendations made/guidelines
-suggested – providing sound argument for these limitations. Outline the
-lessons learned as a result of the research and discuss scope and directions for
-future research.
-Computer Science, SEAS, Aston University – 5 – DC3010 Instructions 2016/17
-This section should be answering the question: “How do I know if the
-deliverable met its goals?”
-Include an assessment of the business value of the deliverable.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/a11y_tool_report}
+\captionsetup{justification=centering}
+\caption{Report generated by the A11Y Browser module
+\label{fig:a11y_tool_report}}
+\end{figure}
+
+\begin{center}
+\textit{I want remediation advice to have more information}
+\end{center}
+The important aspect to evaluate here is that A11Y Core enables a means and
+recommends a way of setting remediation advice for issues found. This
+requirement has been satisfied by extending the Result object and adding
+remediation to it. `Checker's written by users are expected to add the remedy
+to the problem they have identified.
+
+\subsection{Next time}
+Due to the lost time I was only able to complete two iterations on the A11Y
+Tool in comparison to the six on the A11Y Guide. I feel this reflects in both
+the report and product produced. The design feels sound, but the product
+relatively immature.
+
+If I were to deliver this project again with the same incidents and time
+constraints I would probably have changed direction and aimed for only a
+single deliverable the `A11Y guide'.
+
+\subsection{Impact}
+As mentioned above time was relatively tight towards the end of the project
+and thus it has had little time to make an impact across Capgemini and the
+wider development community.
+
+\subsection{Future}
+With the work that has gone into designing/developing the tool thus far I
+believe the ideas and implementation are extensible and could sit as an
+alternative to some of the more well known tools. Following this project I am
+hoping to continue its development into a more solid product.
+
 
 \section{Extending the impact}
 With one of my manifest items being ``Make an impact over getting a good
@@ -53,8 +192,8 @@ grade" I was looking for opportunities throughout the project to extend this.
 Below I have documented some additional deliverables which came out of the
 project as direct side effects of the work done.
 
-\subsection{Markdown/React Documentation Framework}
 \subsection{Colour Contrast Tool}
+\label{sec:colour_contrast}
 Whilst I was creating the A11Y Guide I was asked to experiment with an
 upcoming piece of technology. ``CSS in JS" \citep{CSSInJS}. The industry has been moving
 towards `component driven' development \citep{CDD} through the entrance of
@@ -122,5 +261,99 @@ countries. It receives \textasciitilde3-4 views a day now.
 \end{figure}
 
 
-% TODO - Maybe discuss impact here.. or evaludation..
+\section{Ways of working}
+This is an area of the project which probably experienced the most
+experimentation, problems and successes.
 
+\subsection{Project Diary}
+`Medium' was used to blog the journey and significant events that
+occured throughout the project. I did this to produce a level of transparency
+between myself, my supervisors and the wider Capgemini community. In
+acheiving that goal I think it did a great job. To start with each post was
+targetted towards individual items of `progress' with titles such as 'The
+Manfesto' and `Snapshot of web frameworks'. However, I realised that this
+wasn't really a `diary' of events that happened and would not be sufficient
+to fulfil the role of the project diary.
+
+I decided to change the format into a weekly update
+detailing a summary of what happened followed by in depth notes about
+anything that had been delivered that week. It was great to be able to send
+these to my supervisors and helped to keep the project on track. I
+think this was because commitments
+made in were publically available and thus to me became higher priorty. Towards
+the end of the project these became less frequent and eventually fizzled out
+due to the pressures around delivering the project.
+
+\subsection{Planning}
+At the start of my project I planned to use trello as a means of tracking what
+needed to be done, what was in progress and what had been completed. My aim was
+to use a kanban like approach and limit the work in progress to a single item.
+In the hope of focussing me to work on a single thing at a time. After
+initial setup though the board quickly became stale as I was mainly running
+the project from a notepad which I was able to use in offline environments.
+
+I felt that this turned out to be effective given my circumstances. Trello
+just seemed to be hindering me. With a notepad I was able to
+document thoughts, discussions and actions whilst at work. Where as with
+trello I would have had to hold those until the end of the day before they
+could be written down.
+
+\subsection{Manifesto \& Methodology}
+A manifesto was defined at the beginning of the project to help make
+decisions and form an ethos for the project. Below I have documented where
+each entry was used and its effect on the project.
+
+\begin{center}
+\textit{Making an impact over getting a good grade}
+\end{center}
+This was applied throughout the project. An example being the Colour Contrast
+tool. I could have focussed on writing this report but instead created the
+tool for assessing colour contrast. The tool is likely to add a limited amount
+of value towards my grade but instead will offer other engineers a simple
+effective means for assessing the colour contrast between a foreground and
+background colour. The impact it made to date was demonstrated in
+section \ref{sec:colour_contrast}
+
+\begin{center}
+\textit{Hypothesis’ and supporting evidence over guessing and assuming}
+\end{center}
+During the development of the A11Y guide this was followed extensively. For
+example I hypothesised that React was the framework others were using and
+then gained evidence to support the fact.
+
+With the A11Y tool however a lot of assumptions were made and as a result I
+believe the produce was not as good.
+
+\begin{center}
+\textit{``Start simple with many organic iterations" over ``Upfront design"}
+\end{center}
+Similar to above the A11Y Guide was the perfect example of this. THe
+iterations were clearly defined and well planned. The content was produced
+first, the web site on top of the content was then produced and each
+iteration improved on the inital product.
+
+I feel the A11Y tool was a bit more of a `big bang' approach. More upfront
+design probably would have resulted in better defined iterations and maybe a
+better product. It may have been the fact I had any preconceptions about what
+I had from such a tool.
+
+Fig.~\ref{fig:agile_bicycle} demonstrates this well. The A11Y Guide felt like
+it followed the bottom image, the A11Y tool the top.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{figures/agile_bicycle}
+\captionsetup{justification=centering}
+\caption{The `Agile Bicycle' by \citep{bicycle}
+\label{fig:agile_bicycle}}
+\end{figure}
+
+\section{Personal reflections}
+On a personal level I have en emense level of proudness surrounding what I
+have delivered. I have become a subject matter expert in producing
+accessibile web applications. I have diversified my knowledge in the area of
+accessibility. I have experimented with some new ways of working. I have
+networked with highly sought after members of the development community and I
+have taken an idea and delivered it as a product. I feel it's a great
+demonstration and culmination of some of the skills I have gained along my
+journey as an apprentice.
