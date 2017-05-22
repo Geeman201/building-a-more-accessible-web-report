@@ -29,6 +29,7 @@
 }
 \DeclareOption{ddouble}{\togglefalse{DissertateSingleSpace}}
 
+
 \ProcessOptions\relax
 
 % Line Spacing
@@ -82,6 +83,7 @@
 \RequirePackage{color}
 \RequirePackage{xcolor}
 \usepackage{hyperref}
+\usepackage{makecell}
 \RequirePackage{url}
 \RequirePackage{amssymb}
 \RequirePackage{mathspec}
