@@ -348,6 +348,72 @@ The second, and chosen method, was by allowing the script tag to be inserted
 at development time through a script tag. Users could add this to the html
 file they wished to test.
 
+\subsection{Testing}
+\subsubsection{Enabling others}
+With the tool mainly exposing a means for others to plugin and create custom
+accessibility `checkers' it was important to demonstrate how developers can
+write tests to confirm their checkers. With this in mind a small collection
+of utility methods were created. The aim of these was to reduce the amount of
+boiler plate required to write the tests. For example when creating dom
+elements a test initially looked similar \ref{lst:before}.
+\begin{lstlisting}[label={lst:before}]
+  it('should expect only A elements: Negative test', () => {
+    const actual = AChecker.expects(mount(<li></li>).getDOMNode());
+    expect(actual).toBe(false);
+  });
+\end{lstlisting}
+
+But I kept on finding I was forgetting to add the .getDomNode on the end of
+the call to create the component. This therefore became a candidate for
+extraction. The effect was a much cleaner syntax as demonstrated below.
+
+\begin{lstlisting}[label={lst:before}]
+  it('should expect only A elements: Negative test', () => {
+    const actual = AChecker.expects(render(<li></li>));
+    expect(actual).toBe(false);
+  });
+\end{lstlisting}
+
+
+\subsubsection{The A11Y tool}
+Unit testing of the tool was completed using Jest \citep{jest} with jasmine
+\citep{jasmine}. These are two frameworks which interlink well
+together and offer a simple means to drive web based APIs. Below is a snippet
+of some tests for a HREF Checker whos purpose is to check anchor html elements
+for correct href attributes.
+
+Note how each test increases the functionality expected of the checker which
+enables checking of regressions every time it is excuted. This model was
+applied accross most of the code base.
+
+\begin{lstlisting}
+describe('The Link Checker should', () => {
+
+  it('should expect only A elements: Negative test', () => {
+    const actual = AChecker.expects(render(<li></li>));
+    expect(actual).toBe(false);
+  });
+
+  it('should expect only A elements: Positive test', () => {
+    const actual = AChecker.expects(render(<a></a>));
+    expect(actual).toBe(true);
+  });
+
+  it('should return an error when there is no HREF present', () => {
+    const HTML = render(<a></a>);
+    const actual = new AChecker().execute(HTML);
+    expect(actual.detail.moreInfo).toBe('No HREF present');
+  });
+
+  it('should return an error when the HREF is only a #', () => {
+    const HTML = render(<a href="#"></a>);
+    const actual = new AChecker().execute(HTML);
+    expect(actual.detail.moreInfo).toBe('HREF should go to an anchor on the page. \'#\' is not one of these!');
+  });
+
+  ...
+\end{lstlisting}
+
 
 %\newthought{Lorem ipsum dolor sit amet},
 %

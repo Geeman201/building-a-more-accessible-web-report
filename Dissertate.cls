@@ -246,6 +246,7 @@
 \renewcommand{\frontmatter}{
 	\input{frontmatter/personalize}
 	\maketitle
+	\includepdf[pages={1,2}]{figures/james_gee_project_definition_v2.pdf}
 	 % \copyrightpage
 	\abstractpage
 	\tableofcontents
@@ -326,8 +327,8 @@
     \addcontentsline{toc}{chapter}{References}
 		\begin{appendices}
         \input{chapters/appendixA}
-        \input{chapters/appendixB}
         \input{chapters/appendixC}
+        \input{chapters/appendixD}
     \end{appendices}
     \input{endmatter/colophon}
 }
