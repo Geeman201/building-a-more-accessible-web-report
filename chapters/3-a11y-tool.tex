@@ -20,21 +20,21 @@ unfortunately an item which is ``Left until later" or ``Poorly tested" early
 on in the project. Fig.~\ref{fig:process_1_} and Fig.~\ref{fig:process_2}
 demonstrate two slightly different methods projects go down. The common
 problem is that issues are only detected late in the development lifecycle.
-The problems that are found tend to be similar and remdiation is often a
+The problems that are found tend to be similar and remediation is often a
 painfully repetitive process.
 
 \subsection{Current solutions}
 \label{sec:currentSolutions}
-With this in mind a survey of the current landscape of accessiblity tools was
+With this in mind, a survey of the current landscape of accessibility tools was
 undertaken. Fortunately when producing the A11Y guide a list of current
 testing tools had been collated which made this step relatively easy.
 
-Of the tools each plugs into different possible points throughout the
+Of the tools, each plugs into different possible points throughout the
 development phase:
  \begin{itemize}
  \item The IDE - Most modern IDE's have a means for plugging in linting tools
   to check structure.
- \item The CLI - Rulset libraries such as ESLint and HTMLLint can execute
+ \item The CLI - Ruleset libraries such as ESLint and HTMLLint can execute
  against your code and report issues to the console. They can even be part of
   a wider continuous integration setup
   \item The Browser - By bootstrapping through a `Bookmarklet' this method
@@ -42,7 +42,7 @@ development phase:
  \end{itemize}
 
 Performing more research into how the IDE tools work they are typically just
-wrappers around. The table below shows the good/bad points surrounding each tool
+wrappers around the CLI tools. The table below shows the good/bad points surrounding each tool
 
 \begin{table}[h!]
 \centering
@@ -93,11 +93,11 @@ Similar to the A11Y Guide requirements were defined following Dan North's
  I want to be able to have errors categorised \\
  So that I can prioritise which ones to fix first \\
  \hline
- I want remdediation advice \\
+ I want remediation advice \\
  So that I know how to fix the error \\
  \hline
  I want remediation advice to have more information \\
- So that I can learn about the mistake made \\
+ So that I can learn from the mistake made \\
  \hline
  (This Project Scope) \\
  I want 20\% of issues on BBC's terribly accessible page to be identified \\
@@ -121,14 +121,14 @@ way in which developers are able to use the tool.
 \label{fig:tool_current_design}}
 \end{figure}
 
-With this in mind the design for this tool would focus on reusability and
+With this in mind, the design for this tool would focus on reusability and
 customisation. Coming from a Java background we tend to apply the inversion
 of control principle \citep{DRC} to help decouple the reusable components from
 the specific ones. This comes with the added benefit of being able to build
 and test specific modules in isolation.
-Fig.~\ref{fig:tool_proposed_design} demonstrates the high level design for
+Fig.~\ref{fig:tool_proposed_design} demonstrates the high-level design for
 how this will be applied to the A11Y Tool. Components shown in grey demonstrate
-the possiblites which are opened by using such a design but are out of scope
+the possibilities which are opened by using such a design but are out of scope
 of this project. The next few sections in the report will document the design
 and implementation of each of the components within scope of the project.
 
@@ -148,14 +148,14 @@ forms a language to use for extensible components. `Checker', `Result' and
 
 \subsubsection{Versioning}
 Due to other components relying upon A11Y Core's interfaces, versioning of
-the api it exposes is important to ensure dependent parties are able to update
+the API it exposes is important to ensure dependent parties are able to update
 efficiently. There are many versioning strategies available and most work on
 a form of three digits [major].[minor].[patch]. I always use `Semantic
 Versioning' \citep{Semver} due to the clear definition of when each number should
 increment.
 Patch for bug fixes and non api changes, Minor for API additions which are
-backwards compatible and Major when a breaking API change is introduced. Due to this
-clarity it is slowly becoming the defacto standard for software development
+backward compatible and Major when a breaking API change is introduced. Due to this
+clarity, it is slowly becoming the de-facto standard for software development
 so is likely to be familiar to others.
 
 \subsubsection{Checker}
@@ -203,7 +203,7 @@ Error and Warn have an additional property of
 remediation which is to be added by the `Checker' to offer a recommended
 method to fix the identified issue. This coupling allows for the remediation
 to be specific to the exact issue found by the checker. Fig
-.~\ref{fig:result_design} demonstrates `Results' inheritance structure. It is
+.~\ref{fig:result_design} demonstrates the `Result' inheritance structure. It is
 unlikely that anyone would extend `Result' but similar to above it has been
 implemented with interfaces.
 
@@ -218,14 +218,14 @@ implemented with interfaces.
 \subsubsection{Worker}
 The concept of a `Worker' was added late on during the implementation phase as a
 direct result of the performance of `Checker's being poor. Performance issues
-were noticeable when iterating around a web pages with a large number of DOM
+were noticeable when iterating around web pages with a large number of DOM
 elements. The worker inverted the for loop and meant that
 rather than iterating around the DOM within each `Checker' The DOM was
-iterated around only once and each checker was called to perform it's check
+iterated around only once and each checker executed to perform its check
 only if that DOM node was relevant to it.
 
 `Workers' implement the Singleton Pattern so `Checkers' can be registered from
-anywhere. Each individual checker registers itself with it's retrospective
+anywhere. Each individual checker registers itself with its retrospective
 worker. The result of such a design (and the reason this was chosen over others)
 is that when a `Checker' is imported into a file it is registered with 'A11Y
 Core' and thus available for use. Fig.~\ref{fig:a11y_tool_worker_design}
@@ -256,7 +256,7 @@ import 'checkers/WCAG/TableCaptionChecker.js
 \end{lstlisting}
 
 \subsection{A11Y Browser}
-The browser component enables the tool to be ran within a web browser. Fig
+The browser component enables the tool to be run within a web browser. Fig
 .~\ref{fig:a11y_tool_browser_design} shows how this fits in with the other
 components.
 
@@ -276,9 +276,9 @@ in section \ref{ref:requirements} a collection of goals which the UI needed
 to satisfy were defined:
 
 \begin{itemize}
-\item Highlight the html error in place (HTML Code sniffer does this)
+\item Highlight the HTML error in place (HTML Code sniffer does this)
 \item Categorise errors in error/warning/info (Tota11y does this)
-\item Display remdiation (None do this)
+\item Display remediation (None do this)
 \item Have links to the A11Y guide to learn more about the issue
 \end{itemize}
 
@@ -309,14 +309,14 @@ A problem I had with Tota11y and axe core was logically linking the HTML in
 error back to the code in my IDE. I knew the HTML with the error but
 without the context of its surrounding elements its difficult to tie it back
 to the original source especially when using libraries like React and Angular.
-Unfortunately most browsers deliberately limit access to devtools from
+Unfortunately, most browsers deliberately limit access to devtools from
 javascript. I hypothesised that web developers code web apps with the
 'devtools' open. To clarify this I put a message on our internal slack.
-Asking people to agree/disagree with the statement. 8 'agreed' and 1 'disagreed'.
-From this I decided that the best way to give the context would be to print
-the html element to the devtools console. when the element is clicked it takes
-the developer to the element in the page source. Similarly advice and
-remeidation were also posted here as shown in \ref{fig:remediation}
+Asking people to agree/disagree with the statement. 8 'agreed' and 1 'disagreed'. Confirming my hypothesis.
+From this, I decided that the best way to give the context would be to print
+the HTML element to the devtools console. When the element is clicked it takes
+the developer to the element in the page source. Similarly, advice and
+remediation were also posted here as shown in \ref{fig:remediation}
 
 \begin{figure}[H]
 \centering
@@ -327,34 +327,34 @@ remeidation were also posted here as shown in \ref{fig:remediation}
 \end{figure}
 
 \subsubsection{Bootstrapping the browser}
-For the tool to run script tags need to be loaded into the browser. The traditional means is via a
+For the tool to run, script tags need to be loaded into the browser. The traditional means is via a
 'Bookmarklet' these sit in the bookmark/favourite bar of a users
 browser and when clicked execute javascript on the users web page to insert the
  tag and load the tool.
 
-Unfortunately due to Cross Site Scripting issues browsers are implementing
-content restrictions whereby the browser blocks scripts from a
-domains excluded from a specific meta tag list. When all browsers support
+Unfortunately, due to Cross Site Scripting issues browsers are implementing
+content restrictions \citep{bookmarklets} whereby the browser blocks scripts from domains
+excluded from a specific meta tag list. When all browsers support
 content restrictions the tool would no longer function. An alternate approach
 was required and two methods were explored to solve this.
 
 The first a 'browser extension' which would require a small wrapper around
 the A11Y Browser tool for each individual browser. This solved the problem.
-The tool was loaded into the users browser and worked as expected but a
-wrapper would be require packaging for each indivdual browser and there is
-talk that vendors are phasing out extensions.
+The tool was loaded into the user's browser and worked as expected but a
+wrapper would be require packaging for each individual browser and there is
+talk that vendors are phasing out extensions \citep{chromeapps}.
 
-The second, and chosen method, was by allowing the script tag to be inserted
-at development time through a script tag. Users could add this to the html
+The second, and chosen method was by allowing the script tag to be inserted
+at development time through a script tag. Users could add this to the HTML
 file they wished to test.
 
 \subsection{Testing}
 \subsubsection{Enabling others}
-With the tool mainly exposing a means for others to plugin and create custom
+With the tool mainly exposing a means for others to plug in and create custom
 accessibility `checkers' it was important to demonstrate how developers can
-write tests to confirm their checkers. With this in mind a small collection
+write tests to confirm their checkers. With this in mind, a small collection
 of utility methods were created. The aim of these was to reduce the amount of
-boiler plate required to write the tests. For example when creating dom
+boilerplate required to write the tests. For example when creating dom
 elements a test initially looked similar \ref{lst:before}.
 \begin{lstlisting}[label={lst:before}]
   it('should expect only A elements: Negative test', () => {
@@ -364,7 +364,7 @@ elements a test initially looked similar \ref{lst:before}.
 \end{lstlisting}
 
 But I kept on finding I was forgetting to add the .getDomNode on the end of
-the call to create the component. This therefore became a candidate for
+the call to create the component. This therefore, became a candidate for
 extraction. The effect was a much cleaner syntax as demonstrated below.
 
 \begin{lstlisting}[label={lst:before}]
@@ -378,13 +378,13 @@ extraction. The effect was a much cleaner syntax as demonstrated below.
 \subsubsection{The A11Y tool}
 Unit testing of the tool was completed using Jest \citep{jest} with jasmine
 \citep{jasmine}. These are two frameworks which interlink well
-together and offer a simple means to drive web based APIs. Below is a snippet
-of some tests for a HREF Checker whos purpose is to check anchor html elements
+together and offer a simple means to drive web-based APIs. Below is a snippet
+of some tests for a HREF Checker whose purpose is to check anchor HTML elements
 for correct href attributes.
 
 Note how each test increases the functionality expected of the checker which
-enables checking of regressions every time it is excuted. This model was
-applied accross most of the code base.
+enables checking of regressions every time it is executed. This model was
+applied across most of the code base.
 
 \begin{lstlisting}
 describe('The Link Checker should', () => {

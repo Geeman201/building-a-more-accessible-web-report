@@ -7,7 +7,7 @@ finally accomplish"
 
 \chapter{Evaluation}
 This chapter will provide a critical evaluation of the projects journey and
-the deliverables that were produced. In terms of following a method each
+the deliverables that were produced. In terms of following a method, each
 deliverable will be evaluated using my manifesto (Section
 \ref{sec:manifesto}) and the following questions:
 \begin{enumerate}
@@ -41,13 +41,13 @@ by a collection of resources to allow users to gain a deeper understanding.
 \begin{center}
 \textit{``I want to have coded examples written in React"}
 \end{center}
-Due to the nature of the topic this requirement is difficult to
-measure. Most of the examples written used react as a means to demonstrate
+Due to the nature of the topic, this requirement is difficult to
+measure. Most of the examples written used React as a means to demonstrate
 good and bad practice. An improvement that I worked in during Iteration 4 was
 to enable the documentation framework to embed examples. This was really
 impactful as it enables developers to see the code, the result, and the
 snippet of the tool.
-A problem I had was it was difficult to pitch a `component' at the write
+A problem I had was it was difficult to pitch a `component' at the right
 level for users as I was
 unsure what they would do with it. Would they use it as is? Would they just
 take the HTML? Would they just read and understand it? Perhaps some additional
@@ -57,10 +57,10 @@ more meaningful examples.
 \begin{center}
 \textit{``I want to have assistive tool examples of different markups"}
 \end{center}
-This was implemented mainly through subtitles in the side bar as shown in Fig
-.~\ref{fig:a11y_guide_assistive_tool_snippet}. I felt it demonstrated really well the difference
+This was implemented mainly through subtitles in the sidebar as shown in Fig
+.~\ref{fig:a11y_guide_assistive_tool_snippet}. I felt it demonstrated  the difference
 in what applying good semantics can make to the experience of assistive
-tools. The deliverable faultered in demonstrating tools other than those for
+tools. The deliverable faltered in demonstrating tools other than those for
 the visually/motor impaired. By including examples from other tools a richer
 understanding could have been given.
 
@@ -80,7 +80,7 @@ I feel this requirement was fully satisfied. For every part of the guide a
 collection of at least three useful links was included. Because I followed a
 method for collecting the resources (Section \ref{sec:GatheringKnowledge}) and
 in many cases used them myself to understand various topics I am confident
-that thier content is of high quality.
+that their content is of high quality.
 
 In hindsight assessing each link in this way was extremely time consuming and
 resulted in only slightly better content. But it means the guide makes a good
@@ -88,13 +88,13 @@ reference document for each topic.
 
 \subsection{Impact}
 \subsubsection{Personal \& Business}
-From a personal level I have found this deliverable extremely useful! I
+From a personal level, I have found this deliverable extremely useful! I
 actively use the content and best practices it documents in most of my day to
 day work. When discussing with colleagues accessibility and my expertise on
 accessibility I have been able to refer to this to backup claims and
 suggestions I make.
 
-From a business perspective the guide targets the frameworks and components
+From a business perspective, the guide targets the frameworks and components
 which are used across current Capgemini projects. The real impact will
 only be seen as a greater period of time goes by. Tom Brown a 'Test lead` said
 the following about the guide and its contents.
@@ -103,12 +103,12 @@ the following about the guide and its contents.
 \textit{``The guide gives a great overview of how to fix the common issues we
 often identify during assistive tool testing. Typically when we show developers
 how the tools behave they are keen to fix the problems they have made. It is
-good to see the demosntrations of how the tools behave."}
+good to see the demonstrations of how the tools behave."}
 \end{center}
 
 Being an employee of Capgemini and this work been available in the public
 domain it is possible that this work will result in a reputation gain as
-Capgemeni being a 'leader' in accessible research and writing inclusive
+Capgemini being a 'leader' in accessible research and writing inclusive
 software.
 
 \subsection{Future}
@@ -126,16 +126,16 @@ for the tool \ref{ref:requirements}.
 \end{center}
 Through the introduction of `checker packs' this requirement has been
 achieved. A checker pack is defined through a single Javascript which uses
-ES6 import statements although realtively clean an alternate 'nicer' way in
-which these could have been achieved was through a json file
+ES6 import statements although relatively clean an alternate 'nicer' way in
+which these could have been achieved was through a JSON file
 
 \begin{center}
 \textit{I want to be able to run the tool through multiple methods}
 \end{center}
 Evidence of this being possible is relatively limited but the high level
 design of the tool demonstrates how it could be done. With A11Y Core being
-seperate to A11Y Browser wrapping the core module in a CLI runner for tools
-like jenkins should relatively easy.
+separate to A11Y Browser wrapping the core module in a CLI runner for tools
+like Jenkins would be relatively easy.
 
 \begin{center}
 \textit{I want to be able to have errors categorised}
@@ -170,7 +170,7 @@ Tool in comparison to the six on the A11Y Guide. I feel this reflects in both
 the report and product produced. One of the areas I accumulated technical
 debt in was the testing of the tool. I did some manual testing of the A11Y
 Browser component, and wrote unit tests around the checkers but very
-little of the A11Y Core. To me the design feels sound, but the product
+little of the A11Y Core. To me, the design feels sound, but the product
 relatively immature.
 
 If I were to deliver this project again with the same incidents and time
@@ -185,7 +185,7 @@ wider development community.
 \subsection{Future}
 With the work that has gone into designing/developing the tool thus far I
 believe the ideas and implementation are extensible and could sit as an
-alternative to some of the more well known tools. Following this project I am
+alternative to some of the more well-known tools. Following this project I am
 hoping to continue its development into a more solid product.
 
 
@@ -212,7 +212,7 @@ Having done research into colour contrast tools as part of the A11Y Guide I
 identified a gap for a ``modern", user focussed tool. Most current tools
 require submission to a server and lack demonstrations
 of what the two colours look like when used together \cite*{JuicyStudio}. All
-of them satisfied a relatievly simple set of requirements:
+of them satisfied a relatively simple set of requirements:
 \begin{itemize}
 \item Report the colour contrast level between two distinct colours
 \item Report whether the colours contrast level of such colours satisfies the
@@ -237,10 +237,10 @@ cover only the core logic for calculating colour contrast.
 
 The `Happy Day' user journey would be:
 \begin{itemize}
-\item User enters first colour in input field (Can paste)
+\item User enters the first colour in input field (Can paste)
 \item User enters second colour in input field
 \item On a valid colour entered. Both are displayed as background and
-foreground; the value of colour contrast is displayed; and the contrast
+foreground; the value of colour contrast is displayed, and the contrast
 levels WCAG appropriateness is displayed in the circles. Green for success, Red
 for failure.
 \end{itemize}
@@ -249,7 +249,7 @@ In the error scenario of a user entering an invalid colour, the background
 colours would remain the same and the input field would have a `red'
 background and border to signify an error.
 
-This was deployed through github pages to \url{https://colour-contrast.github.io/}
+This was deployed through GitHub pages to \url{https://colour-contrast.github.io/}
 and was tweeted about by myself and
 subsequently the creator of 'styled-components'. In the month
 the tool has been live it has gained \textasciitilde450 views across most
@@ -266,24 +266,22 @@ countries. It receives \textasciitilde3-4 views a day now.
 
 \section{Ways of working}
 This is an area of the project which probably experienced the most
-experimentation, problems and successes.
+experimentation, problems, and successes.
 
 \subsection{Project Diary}
 `Medium' was used to blog the journey and significant events that
-occured throughout the project. I did this to produce a level of transparency
+occurred throughout the project. I did this to produce a level of transparency
 between myself, my supervisors and the wider Capgemini community. In
-acheiving that goal I think it did a great job. To start with each post was
+achieving that goal I think it did a great job. To start with each post was
 targetted towards individual items of `progress' with titles such as 'The
-Manfesto' and `Snapshot of web frameworks'. However, I realised that this
+Manifesto' and `Snapshot of web frameworks'. However, I realised that this
 wasn't really a `diary' of events that happened and would not be sufficient
-to fulfil the role of the project diary.
+to fulfill the role of the project diary.
 
 I decided to change the format into a weekly update
-detailing a summary of what happened followed by in depth notes about
+detailing a summary of what happened followed by in-depth notes about
 anything that had been delivered that week. It was great to be able to send
-these to my supervisors and helped to keep the project on track. I
-think this was because commitments
-made in were publically available and thus to me became higher priorty.
+these to my supervisors and helped to keep the project on track.
 
 All blog posts are available at \url{https://medium.com/@Geeman201/}. Below
 is an example of the most popular post `March 2017 - Web Framework Snapshots'
@@ -297,13 +295,13 @@ which received 42 reads alone.
 \label{fig:medium_example}}
 \end{figure}
 
-Towards the end of the project these became less frequent and eventually
+Towards the end of the project, these became less frequent and eventually
 fizzled out due to the pressures around delivering the project.
 
 
 
 \subsection{Planning}
-At the start of my project I planned to use trello as a means of tracking what
+At the start of my project, I planned to use Trello as a means of tracking what
 needed to be done, what was in progress and what had been completed. My aim was
 to use a kanban like approach and limit the work in progress to a single item.
 In the hope of focussing me to work on a single thing at a time. After
@@ -311,9 +309,9 @@ initial setup though the board quickly became stale as I was mainly running
 the project from a notepad which I was able to use in offline environments.
 
 I felt that this turned out to be effective given my circumstances. Trello
-just seemed to be hindering me. With a notepad I was able to
-document thoughts, discussions and actions whilst at work. Where as with
-trello I would have had to hold those until the end of the day before they
+just seemed to be hindering me. With a notepad, I was able to
+document thoughts, discussions, and actions whilst at work. Whereas with
+Trello I would have had to hold those until the end of the day before they
 could be written down.
 
 \subsection{Manifesto \& Methodology}
@@ -345,13 +343,13 @@ believe the produce was not as good.
 \begin{center}
 \textit{``Start simple with many organic iterations" over ``Upfront design"}
 \end{center}
-Similar to above the A11Y Guide was the perfect example of this. THe
+Similar to above the A11Y Guide was the perfect example of this. The
 iterations were clearly defined and well planned. The content was produced
-first, the web site on top of the content was then produced and each
-iteration improved on the inital product.
+first, the website on top of the content was then produced and each
+iteration improved on the initial product.
 
 I feel the A11Y tool was a bit more of a `big bang' approach. More upfront
-design probably would have resulted in better defined iterations and maybe a
+design probably would have resulted in better-defined iterations and maybe a
 better product. It may have been the fact I had any preconceptions about what
 I had from such a tool.
 
@@ -374,9 +372,9 @@ Although consumers may not have been using the deliverables it has been
 extremely comforting to know that anything I change is tested and deployed
 upon commit. Gone is the ``It worked on my machine'' and by using Github to
 store the project I haven't had to worry about problems like my laptop
-breaking losing internet. Fig.~\ref{fig:ghub} are the statistics for this
+breaking. Fig.~\ref{fig:ghub} are the statistics for this
 very report. A release in the report context is a `tag' at a point in the
-github history at which a pdf has been produced.
+GitHub history at which a pdf has been produced.
 
 \begin{figure}[H]
 \centering
@@ -387,9 +385,9 @@ github history at which a pdf has been produced.
 \end{figure}
 
 \section{Personal reflections}
-On a personal level I have en emense level of proudness surrounding what I
+On a personal level, I have an immense level of proudness surrounding what I
 have delivered. I have become a subject matter expert in producing
-accessibile web applications. I have diversified my knowledge in the area of
+accessible web applications. I have diversified my knowledge in the area of
 accessibility. I have experimented with some new ways of working. I have
 networked with sought after members of the development community and I
 have taken an idea and delivered it as a product. This project is a great

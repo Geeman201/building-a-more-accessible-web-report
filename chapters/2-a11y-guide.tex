@@ -5,7 +5,7 @@
 \end{savequote}
 
 \chapter{A11Y Guide}
-In preperation for the main deliverable a deeper level of knowledge in the
+In preparation for the main deliverable, a deeper level of knowledge in the
 accessibility space was required. To gain this knowledge and inline with my
 `Share Everything' approach it was decided that an `Accessibility
 training guide' would be produced here on referred to as `A11Y guide'. The idea
@@ -16,7 +16,7 @@ knowledgable enough to produce good content.
 \subsection{Planning}
 As researched by \citep{Ebbinghaus} in 1885 the forgetting curve demonstrates the
 amount of knowledge remembered after a period of time. See Fig.~\ref{fig:ebbinghaus}
-Repeating or revising the learning unsuprisingly results in the knowledge
+Repeating or revising the learning unsurprisingly results in the knowledge
 stored in memory for longer.
 
 \begin{figure}[H]
@@ -27,14 +27,14 @@ stored in memory for longer.
 \label{fig:ebbinghaus}}
 \end{figure}
 
-With this in mind I plan to iteratively build the A11Y Guide so
+With this in mind, I plan to iteratively build the A11Y Guide so
 that the knowledge will be reinforced. The steps for its production will be
 as follows:
 \begin{enumerate}
   \item Search for useful resources online (First time learning)
   \item Score the identified resources with the assistive tools for a first hand
   experience along with other criteria (Second time repeating)
-  \item Collate the resources under the correct header in a github project
+  \item Collate the resources under the correct header in a Github project
   \item Setup continuous deployment scripts to ensure deploy on commit
   \item For each header create and document best practices (Third time
   repeating)
@@ -42,7 +42,7 @@ as follows:
   \item For each header create coded examples (Fourth time repeating)
 \end{enumerate}
 
-As explicitly stated there will be four loops of observing, reviewing and
+As stated there will be four loops of observing, reviewing and
 applying the knowledge learned which should result in a peak in knowledge
 when producing the tool.
 
@@ -55,15 +55,15 @@ requirements of Capgemini's teams.
 \subsubsection{Understanding industry movement}
 \label{sec:uim}
 The purpose of understanding the current industry is to ensure that the
-content within the guide is relevant and inline with the current status of the
-industry. By understanding where the industry had come from and where it was
-going would enable me to filter `old' resources from `new' resources and thus
+content within the guide is relevant and aligned with the current status of the
+industry. By understanding where the industry has come from and where it is
+going will enable me to filter `old' resources from `new' resources and thus
 produce more relevant guidance. See \ref{sec:GatheringKnowledge} for more
 detail on the collection phase.
 
 Being an apprentice within the industry I have exposure to general movements
-and directions (through colleagues and self found sources), but primary
-evidence was required to back up my personal opinion.
+and directions (through colleagues and self-found sources), but primary
+evidence was required to back up my theories.
 
 In 2016 the largest survey ever of front end developers was completed the
 'State of JS' \citep{StateOfJs}. This survey covered almost every aspect of the front end
@@ -80,13 +80,13 @@ pointers:
 
 Based on my constant technology tracking I hypothesised that the technologies
 that were `Used it before, would use again' and `Heard of it, would like to
-learn' were the big winners in 2017. In Javscript frameworks this was ReactJs
+learn' were the big winners in 2017. In Javascript frameworks, this was ReactJs
 and Angular 2. Again this needed clarification so I chose to use `Google
 Trends' \citep{GoogleTrends} a tool which allows users to view graphs of
 search queries on a
-relative scale. During development most software engineers will
+relative scale. During development, most software engineers will
 refer to google for documentation and issues so I felt this was going to be a
-sound method for determining this. Fig.~\ref{fig:js_compare} confirms my
+sound method for determining the direction. Fig.~\ref{fig:js_compare} confirms my
 hypothesis and shows how ReactJS overtook AngularJS with Angular 2 on the rise.
 
 \begin{figure}[H]
@@ -100,12 +100,7 @@ hypothesis and shows how ReactJS overtook AngularJS with Angular 2 on the rise.
 \end{figure}
 
 \subsubsection{Questionnaire}
-% TODO
-% - Reference Professional competency scale https://hr.od.nih.gov/workingatnih/competencies/proficiencyscale.htm
-% - Reference Remote working Capgemini
-% - Reference google forms
-
-The questionnaire's purpose is to understand the frameworks, components and
+The questionnaire's purpose is to understand the frameworks, components, and
 competencies in use across Capgemini. The next three paragraphs describe what
 I want to discover and why.
 
@@ -122,15 +117,15 @@ valuable.
 
 The level of competency developers have in accessibility \ref{q:6}. This will
 help understand the level at which to pitch the guidance (The target audience)
-and will answer the question ``What level of competency can be assumed?". My
+and will answer the question ``What level of competency can be assumed?". The
 aim is to use the National Health competency scale \citep{NHComptency} to
-asses this.
+assess this.
 
 Google Forms was used to implement the questionnaire due to its simple
 setup and integration into Google Spreadsheets which made the following
 analysis much easier.
 
-Out of a possible 69 team members 40\% (26 members) responded.
+Out of a possible 69 team members, 40\% (26 members) responded.
 
 The first two questions showed how most software developers are using or are
 competent in either React or AngularJS. This with the fact that
@@ -139,9 +134,8 @@ examples in the A11Y guide should be written in React and library
 recommendations made with this in mind. It is a fair assumption that
 developers competent in React should be able to apply the knowledge learned
 to Angular JS. Fig.~\ref{fig:current_proj} and Fig.~\ref{fig:competent_in}
-are bar charts of the results given. A suprise discovery was the popularity
-of JQuery. This is likely due to its widespread usage historically as it is
-slowly becoming legacy.
+are bar charts of the results given. A surprise discovery was the popularity
+of JQuery. This is likely due to its widespread usage historically as it is becoming legacy.
 
 \begin{figure}[H]
 \centering
@@ -162,15 +156,15 @@ slowly becoming legacy.
 \end{figure}
 
 The next two questions focussed on understanding the software components in
-use across client projects. An important aspect of many of our clients user base
+use across client projects. An important aspect of many of our client's user base
 is data entry and it is vital that users of assistive tools can interact and
 understand these. The first question revolved around this and asked ``What
 form components are in use on your current project?". The next question was
 targeting more data consumption and higher level components so asked ``What
 web components are in use on your project".
 
-Unsuprisingly of the form components Fig.~\ref{fig:form_components}, textual
-inputs (23/26 respondants) were the highest with select menus (22/26) and
+Of the form components Fig.~\ref{fig:form_components}, textual
+inputs (23/26 respondents) were the highest with select menus (22/26) and
 validation messages (20/26) close behind. These would therefore be completed
 first in the A11Y guide.
 
@@ -183,11 +177,11 @@ first in the A11Y guide.
 \label{fig:form_components}}
 \end{figure}
 
-At a data consumption level there was a small anomoly in the data. `Images'
-had accumulated 27/26 respondants. Due to the small sample size I dug into the
+At a data consumption level, there was a small anomaly in the data. `Images'
+had accumulated 27/26 respondents. Due to the small sample size I dug into the
 raw data and discovered that the `Images' option appeared twice on the
 possible answers. With manual counting of this value, the correct number
-of respondants was actually 17/26.
+of respondents was actually 17/26.
 
 With images now normalised Navbars, Tabs, and Images all had 17/26 usages.
 These were shortly followed by Dialogs (16/26) and Tables (16/26). Fig
@@ -202,7 +196,7 @@ These were shortly followed by Dialogs (16/26) and Tables (16/26). Fig
 \label{fig:components_in_use}}
 \end{figure}
 
-The final quesion asked each individual to rate themselves on the National
+The final question asked each individual to rate themselves on the National
 Health competency scale \citep{NHComptency}. I added some additional guidance
 to the different levels to try and get a consistent answer across the
 participants.
@@ -216,8 +210,8 @@ Knows best practice
 \item Expert - The `go to' person for web accessibility
 \end{itemize}
 
-Due the questionnaire being anonymous it is a fair assumption that honest
-answers are more probable. It is interesting how 18/26 ~70\% of respondants
+Due to the questionnaire being anonymous it is a fair assumption that honest
+answers are more probable. It is interesting how 18/26 ~70\% of respondents
 have had no experience with the testing tools and rely upon Google to
 understand accessibility. Fig.~\ref{fig:a11y_level} once again highlights
 the requirement a project around accessibility is required at Capgemini.
@@ -243,8 +237,8 @@ simplest method I experimented with was to collate the top five results from
 however, after reviewing resources in `Links' and `Buttons' items which I am
 personally familiar with. I found a lot of overlap between content and after
 testing them with the tools, similar mistakes across all of them.
-None seemed to capture the `why' which naturally meant I needed a
-different method.
+None seemed to capture the `why' which naturally a
+different method was needed.
 
 To produce a new method I started by understanding what I needed to know to
 produce the content. By understanding this I would be able to produce a method
@@ -260,14 +254,14 @@ key things I needed to know were:
 \end{itemize}
 
 I produced 10 questions each with a possible score of 10. I was looking to
-use the three best scoring resources in my content.
+use the three best scoring resources in the A11Y Guide content.
 
 \subsubsection{Example Scoring}
 
 
 \subsubsection{Outputs}
 Inline with my `Open Source' and `Share Everything' ethos the resources were
-sorted based upon their content and placed upon my github account in a public
+sorted based upon their content and placed upon my GitHub account in a public
  repository.
 See Fig \ref{fig:allyLinksDemo}.
 Following the principles of Continuous Delivery this could in fact be
@@ -300,7 +294,7 @@ solution later.
  \hline
  I want to have a section highlighting the most important aspects I need to
  take on board \\
- So that when I can quickly apply them on my current project \\
+ So that I can quickly apply them on my current project \\
  \hline
  I want to have coded examples written in React \\
  So that I can understand and apply the knowledge \\
@@ -316,20 +310,20 @@ solution later.
 
 \section{Deliverable}
 \subsection{Iteration 1 - Create content using markdown}
-The first iteration of developing content was targetted the broader aspects
-which affect every part of the users experience. This covered page structure,
+The first iteration of developing content was targeting the broader aspects
+which affect every part of the user's experience. This covered page structure,
 page content and other general aspects like typography and colour. The content was produced
 using Markdown \citep{Markdown}.
 
 \subsubsection{Why Markdown?}
 Markdown was chosen as it is fast becoming the `developer standard' for writing
 documentation. When producing content, familiarity is key to producing an
-enviornment in which people will collaborate. If you first have to
+environment in which people will collaborate. If you first have to
 learn a new language or tool the barrier to entry to produce the content is
 higher and thus you are less likely to do it. As Github the `worlds biggest'
 \citep{GithubBig} software control platform has bought into markdown as way
 developers communicate `most' developers have at least some knowledge in the
-area. If they do not, the documentation for using markdown is well estabilished.
+area. If they do not, the documentation for using markdown is well established.
 
 An additional benefit to using markdown is it is relatively difficult to make
 the content you produce ``Inaccessible". As I want the guide to demonstrate
@@ -337,8 +331,8 @@ best practices; it should really be following them. Markdown compilers are
 great at transforming content into `assistive tool' friendly HTML.
 
 Fig \ref{fig:hierarchy} and Fig \ref{fig:structures} demonstrates how the
-content is displayed in github's standard folder view. The markdown text is
-converted into HTML and displayed in a clear well structured manner.
+content is displayed in Github's standard folder view. The markdown text is
+converted into HTML and displayed in a clear well-structured manner.
 
 \begin{figure}[H]
     \centering
@@ -364,7 +358,7 @@ This iteration focussed on taking the content I had produced and turning it
 into an easily consumable website. Using this content and the requirements set
 out in \ref{sec:requirements} the design would need to support:
 \begin{itemize}
-\item Coded Examples (Prefferably with snippet highlighting)
+\item Coded Examples (with snippet highlighting)
 \item Snippets of the assistive tools reaction to good/bad markup
 \item Navigation for a hierarchical structure
 \item The best practices it describes
@@ -390,7 +384,7 @@ navbar and HTML. The idea was to enable the documentation framework to be
 reused by abstracting the framework away from the content itself. For a user
 of the documentation framework, I wanted them to only have to edit the
 content and/or the Table of Contents. This would enable content to be the
-users main focus and thus speed up the development of content for the guide.
+user's main focus and thus speed up the development of content for the guide.
 
 \begin{figure}[H]
 \centering
@@ -418,7 +412,7 @@ components to be used.
 The web app was built using 'create-react-app' \citep{CreateReactApp} a tool
 built by facebook for enabling the quick production of React web applications.
 When the CLI tool runs it generates a basic web application with some sample
-code. To reduce the risk later and following the continous delivery
+code. To reduce the risk later and following the continuous delivery
 guidelines \citep{ContinuousDelivery} I decided now was a good time to set up
 my deploy pipeline. Fig.~\ref{fig:cd_pipeline} demonstrates the pipeline
 through a sequence diagram.
@@ -436,7 +430,7 @@ Github Pages
 As described by the title this iteration focussed on producing more content;
 specifically around the forms and components identified in the questionnaire.
 With the continuous deployment pipeline setup changes were instantly
-consumeable at \url{https://geeman201.github.io/geemans-a11y-guide/}
+consumable at \url{https://geeman201.github.io/geemans-a11y-guide/}
 
 \subsection{Iteration 4 - Recognise/Implement custom pages}
 \label{sec:iteration_4}
